@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MultiMedia Solution Cafe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    * {
+      font-family: serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      width: 100%;
+      background-color: #f0f4f8;
+    }
+
+    /* Navigation */
+    .nav {
+      width: 100%;
+      background-color: #0d47a1;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    ul {
+      list-style: none;
+      display: flex;
+    }
+    li {
+      margin-right: 35px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .nav ul a {
+      text-decoration: none;
+      color: white;
+    }
+    .nav ul a:hover {
+      color: #0d47a1;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .menu {
+      font-size: 35px;
+      color: white;
+      display: none;
+    }
+    #click {
+      display: none;
+    }
+    .short-lname {
+      display: none;
+    }
+    .long-lname {
+      color: white;
+      font-size: 35px;
+      font-weight: 800;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    /* Marquee */
+    .about-us {
+      background-color: lightcoral;
+      position: fixed;
+      top: 80px;
+      width: 100%;
+      padding: 5px;
+      z-index: 999;
+    }
+
+    /* About Section */
+    .about {
+      margin: 140px 20px 30px 20px;
+      background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .about h3 {
+      text-align: center;
+      font-size: 38px;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 18px;
+      padding: 6px 10px;
+      line-height: 1.5;
+    }
+
+    /* Gallery */
+    .gallery {
+      background-color: #3de5fbf6;
+      margin: 40px 10px;
+      box-shadow: 5px 5px 10px black;
+      padding: 10px;
+    }
+    .gallery h3 {
+      text-align: center;
+      font-size: 30px;
+      font-family: serif;
+      font-style: italic;
+    }
+    .gallery img {
+      width: 300px;
+      border: 2px solid black;
+      margin: 5px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+
+    .pop_up {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .popup-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 10px;
+      margin-top: 80px;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #ff4444;
+    }
+
+    /* Services Section */
+    .services {
+      margin: 40px 10px;
+      padding: 20px;
+      box-shadow: 5px 5px 10px black;
+      background-color: #93c4fd77;
+    }
+    .services h3 {
+      font-size: 40px;
+      text-align: center;
+      font-family: serif;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+    .tabs-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .tabs-content i {
+      margin-right: 10px;
+      color: #0d47a1;
+    }
+    .tabs-content:hover {
+      background-color: #0df286;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #0a192f;
+      color: #f8f9fa;
+      padding: 30px 10px;
+      text-align: center;
+      border-top: 3px solid #64ffda;
+    }
+    .footer-content {
+      max-width: 800px;
+      margin: auto;
+    }
+    .footer-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #64ffda;
+    }
+    .footer-content p {
+      font-size: 16px;
+      margin: 4px 0;
+    }
+    .footer-content a {
+      color: #90caf9;
+      text-decoration: none;
+    }
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #b0bec5;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .long-lname {
+        display: none;
+      }
+      .short-lname {
+        display: block;
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .menu {
+        display: block;
+      }
+      .nav ul {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.9);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav ul li {
+        margin: 30px 0;
+        text-align: center;
+      }
+      #click:checked ~ ul {
+        transform: translateY(0);
+        margin-top: 80px;
+      }
+      #click:checked ~ .menu i:before {
+        content: "\f00d";
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header id="Home">
+    <div class="about-us">
+      <marquee>MultiMedia Solution Cafe offers a variety of video and photo editing and mixing services as per your needs.</marquee>
+    </div>
+    <div class="nav">
+      <h3 class="long-lname">MultiMedia Solution Cafe</h3>
+      <h3 class="short-lname">MSC</h3>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ABOUT US -->
+  <section class="about" id="about">
+    <h3>About Us</h3>
+    <div class="about-content">
+      <p><b>Welcome to MultiMedia Solution Cafe, your one-stop destination for all visual storytelling needs.</b></p>
+      <p>We specialize in high-quality video editing to make your moments cinematic and memorable.</p>
+      <p>Our team offers professional photography services for weddings, birthdays, and events.</p>
+      <p>With advanced photo editing, we enhance every image to perfection.</p>
+      <p>We provide easy and flexible booking options online or in-store.</p>
+      <p>From candid shots to traditional poses, we cover it all.</p>
+      <p>We also design customized photo albums that capture your memories in style.</p>
+      <p>Whether it’s a small family function or a grand celebration, we’ve got you covered.</p>
+      <p>Quality, creativity, and customer satisfaction are at the heart of everything we do.</p>
+      <p>Let us turn your special moments into timeless memories.</p>
+      <p>Visit us today and experience visual excellence with our shop.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h3>Services</h3>
+    <div class="tabs">
+      <div class="tabs-content"><i class="fas fa-video"></i> Video Editing</div>
+      <div class="tabs-content"><i class="fas fa-image"></i> Photo Editing</div>
+      <div class="tabs-content"><i class="fas fa-book"></i> Album Creation</div>
+      <div class="tabs-content"><i class="fas fa-camera"></i> Photography Shooting</div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <div class="gallery" id="gallery">
+    <h3>Gallery</h3>
+    <a href="#"><img src="data/1.jpg" alt="" class="gallery-Img"></a>
+    <a href="#"><img src="data/2.jpg" alt="" class="gallery-Img"></a>
+    <a href="#"><img src="data/3.jpg" alt="" class="gallery-Img"></a>
+    <a href="#"><img src="data/4.jpg" alt="" class="gallery-Img"></a>
+    <a href="#"><img src="data/5.jpg" alt="" class="gallery-Img"></a>
+    <a href="#"><img src="data/6.jpg" alt="" class="gallery-Img"></a>
+  </div>
+
+  <!-- POPUP -->
+  <div id="popup" class="pop_up">
+    <span class="close">&times;</span>
+    <img class="popup-content" id="popupimage">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <h2 class="footer-title">MultiMedia Solution Cafe</h2>
+      <p>Name: Binod Kumar</p>
+      <p>Email: <a href="mailto:binodmsc007@gmail.com">binodmsc007@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919006720572">+91 9006720572</a></p>
+      <p>Address: Sharma Market, Near Railway Station, Kahalgaon (813203), Bhagalpur, Bihar, India</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MultiMedia Solution Cafe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS for Popup -->
+  <script>
+    const tabs = document.querySelectorAll(".gallery-Img");
+    const model = document.getElementById("popup");
+    const modelImg = document.getElementById("popupimage");
+    const closeBtn = document.querySelector(".close");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+        model.style.display = "block";
+        modelImg.src = tab.src;
+      });
+    });
+
+    closeBtn.onclick = () => model.style.display = "none";
+    window.onclick = (e) => { if (e.target === model) model.style.display = "none"; }
+  </script>
+
+</body>
+</html>
