@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: serif;
+      background: linear-gradient(to bottom, #00c9a7, #a1ffce);
+      color: #222;
+    }
+
+    /* Gallery container */
+    .gallery {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background: #ffffffc2;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+
+    /* Heading */
+    .gallery h3 {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 800;
+      color: #0b3d91;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Grid layout */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* Image styling */
+    .gallery-container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #0b3d91;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Video section */
+    section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #004d40;
+      font-weight: 700;
+    }
+
+    .video {
+      margin: 10px;
+      width: 90%;
+      max-width: 500px;
+      height: 260px;
+      border-radius: 12px;
+      box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Popup styles */
+    .pop_up {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #fff;
+      animation: zoomIn 0.4s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .close:hover {
+      color: #ff3c3c;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #011021;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 5px solid #ffe600;
+      margin-top: 60px;
+    }
+
+    .footer-title {
+      font-size: 28px;
+      color: #ffe600;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-content p, .footer-content a {
+      font-size: 16px;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #d6d6d6;
+    }
+
+    .home-button {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #000;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 255, 0, 0.6);
+    }
+
+
+
+
+    @media (max-width: 600px) {
+      .gallery h3, section h3 {
+        font-size: 28px;
+      }
+
+      .video {
+        height: 200px;
+      }
+
+      .popup-content {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <h3>Gallery</h3>
+    <div class="gallery-container">
+      <!-- Loop Images -->
+      <a href="#"><img src="1.jpg" alt="Image 1" class="gallery-Img"></a>
+      <a href="#"><img src="2.jpg" alt="Image 2" class="gallery-Img"></a>
+      <a href="#"><img src="3.jpg" alt="Image 3" class="gallery-Img"></a>
+      <a href="#"><img src="4.jpg" alt="Image 4" class="gallery-Img"></a>
+      <a href="#"><img src="5.jpg" alt="Image 5" class="gallery-Img"></a>
+      <a href="#"><img src="6.jpg" alt="Image 6" class="gallery-Img"></a>
+      <a href="#"><img src="7.jpg" alt="Image 7" class="gallery-Img"></a>
+      <a href="#"><img src="8.jpg" alt="Image 8" class="gallery-Img"></a>
+      <a href="#"><img src="9.jpg" alt="Image 9" class="gallery-Img"></a>
+      <a href="#"><img src="10.jpg" alt="Image 10" class="gallery-Img"></a>
+      <a href="#"><img src="11.jpg" alt="Image 11" class="gallery-Img"></a>
+      <a href="#"><img src="12.jpg" alt="Image 12" class="gallery-Img"></a>
+      <a href="#"><img src="13.jpg" alt="Image 13" class="gallery-Img"></a>
+      <a href="#"><img src="14.jpg" alt="Image 14" class="gallery-Img"></a>
+      <a href="#"><img src="15.jpg" alt="Image 15" class="gallery-Img"></a>
+      <a href="#"><img src="16.jpg" alt="Image 16" class="gallery-Img"></a>
+      <a href="#"><img src="17.jpg" alt="Image 17" class="gallery-Img"></a>
+      <a href="#"><img src="18.jpg" alt="Image 18" class="gallery-Img"></a>
+      <a href="#"><img src="19.jpg" alt="Image 19" class="gallery-Img"></a>
+      <a href="#"><img src="20.jpg" alt="Image 20" class="gallery-Img"></a>
+    </div>
+
+    <!-- Video Section -->
+    <section>
+      <h3>Mixing Videos</h3>
+      <video class="video" controls>
+        <source src="1video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video class="video" controls>
+        <source src="2video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video class="video" controls>
+        <source src="3video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <a href="index.html" class="home-button" style="color: black;">Back To Home</a>
+      <h2 class="footer-title">MultiMedia Solution Cafe</h2>
+      <p>Name: Binod Kumar</p>
+      <p>Email: <a href="mailto:binodmsc007@gmail.com" style="color: rgb(65, 65, 243);"">binodmsc007@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919006720572" style="color: rgb(99, 99, 243);">+91 9006720572</a></p>
+      <p>WhatsApp: <a href="https://wa.me/919431462683" target="_blank" style="color: #094dea;">+91 9431462683</a></p>
+      <p>Address: Sharma Market, Near Railway Station, Kahalgaon(813203), Bhagalpur, Bihar, India</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MultiMedia Solution Cafe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="pop_up">
+    <span class="close">&times;</span>
+    <img class="popup-content" id="popupimage">
+  </div>
+
+  <!-- Popup JS -->
+  <script>
+    const tabs = document.querySelectorAll(".gallery-Img");
+    const model = document.getElementById("popup");
+    const modelImg = document.getElementById("popupimage");
+    const closeBtn = document.querySelector(".close");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+        model.style.display = "flex";
+        modelImg.src = tab.src;
+      });
+    });
+
+    closeBtn.onclick = () => model.style.display = "none";
+
+    window.onclick = (event) => {
+      if (event.target === model) {
+        model.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>
