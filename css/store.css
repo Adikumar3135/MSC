@@ -1,0 +1,2205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================
+   MSC TECH STORE — COMING SOON
+===================================== */
+
+
+/* MSC STORE — FUTURISTIC TECH LOADER */
+
+.msc-tech-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(ellipse at center, #202016 0%, #0b0b09 42%, #050505 100%);
+    color: #f6f0e3;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .65s ease, visibility .65s ease;
+}
+
+.msc-tech-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.msc-tech-loader-inner {
+    width: min(88%, 410px);
+    text-align: center;
+}
+
+.msc-tech-orbit {
+    position: relative;
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(218, 184, 105, .22);
+    border-radius: 50%;
+    animation: mscOrbitRotate 5s linear infinite;
+}
+
+.msc-tech-orbit::before,
+.msc-tech-orbit::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #c7a65b;
+    border-radius: 50%;
+}
+
+.msc-tech-orbit::before {
+    inset: 11px;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    animation: mscOrbitRotate 2s linear infinite;
+}
+
+.msc-tech-orbit::after {
+    inset: -9px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    opacity: .6;
+    animation: mscOrbitRotate 3s linear infinite reverse;
+}
+
+.msc-tech-core {
+    width: 82px;
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient(circle, #39301a, #100f0b 75%);
+    box-shadow: 0 0 28px rgba(212, 175, 98, .22);
+    animation: mscOrbitRotate 5s linear infinite reverse;
+}
+
+.msc-tech-core span {
+    color: #e8cc84;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.msc-tech-core small {
+    margin-top: 2px;
+    color: #b5a77e;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+.msc-tech-node {
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f0d48c;
+    box-shadow: 0 0 15px #d4af62;
+}
+
+.msc-tech-loader-inner h2 {
+    margin: 0;
+    font-size: clamp(22px, 5vw, 30px);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.msc-tech-loader-inner h2 span {
+    color: #d4af62;
+}
+
+.msc-tech-status {
+    margin: 13px 0 25px;
+    color: #a8a397;
+    font-size: 10px;
+    letter-spacing: 3px;
+    animation: mscStatusPulse 1.2s ease-in-out infinite;
+}
+
+.msc-tech-progress {
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    background: #28261f;
+}
+
+.msc-tech-progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #8c6b2f, #f1d48c);
+    box-shadow: 0 0 12px rgba(241, 212, 140, .6);
+    transition: width .15s linear;
+}
+
+.msc-tech-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    color: #777368;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#mscLoaderPercent {
+    color: #e2c27b;
+    font-size: 10px;
+}
+
+@keyframes mscOrbitRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes mscStatusPulse {
+    50% {
+        opacity: .45;
+    }
+}
+
+@media (max-width: 480px) {
+    .msc-tech-orbit {
+        width: 125px;
+        height: 125px;
+    }
+
+    .msc-tech-loader-inner h2 {
+        letter-spacing: 1px;
+    }
+
+    .msc-tech-bottom {
+        font-size: 7px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .msc-tech-orbit,
+    .msc-tech-core,
+    .msc-tech-status {
+        animation: none;
+    }
+}
+
+.msc-store-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #211f1a;
+    color: white;
+    font-family: cursive;
+    border-bottom: 2px solid white;
+}
+
+.msc-store-header {
+    min-height: 88px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #e5dccd;
+}
+
+.msc-store-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.msc-store-brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.msc-store-brand span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.msc-store-brand strong {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.msc-store-brand small {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+.msc-store-home {
+    color: #f4d5a5;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.msc-store-home i {
+    margin-right: 7px;
+}
+
+.msc-store-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 610px;
+    padding: 80px 7%;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 45px;
+    background: #171613;
+    color: #f7f3eb;
+}
+
+.msc-store-glow {
+    position: absolute;
+    z-index: -1;
+    width: 500px;
+    height: 500px;
+    top: -180px;
+    right: 5%;
+    border-radius: 50%;
+    background: #b89558;
+    opacity: 0.09;
+    filter: blur(100px);
+}
+
+.msc-store-content {
+    max-width: 650px;
+}
+
+.msc-store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 15px;
+    border: 1px solid #5e4b2f;
+    border-radius: 30px;
+    color: #e1c18a;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.msc-store-badge span {
+    width: 7px;
+    height: 7px;
+    background: #d8b575;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #d8b575;
+    animation: mscStorePulse 1.5s infinite;
+}
+
+.msc-store-content h1 {
+    margin: 30px 0 20px;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5.3vw, 72px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1.8px;
+}
+
+.msc-store-content h1 em {
+    display: block;
+    margin-top: 8px;
+    color: #d2b078;
+    font-weight: 400;
+}
+
+.msc-store-description {
+    max-width: 520px;
+    color: #c7c0b4;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.msc-store-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.msc-store-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 22px;
+    background: #c6a366;
+    color: #171613;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.msc-store-btn:hover {
+    background: #e0c38f;
+    transform: translateY(-3px);
+}
+
+.msc-store-secondary {
+    color: #f1e7d5;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.msc-store-secondary i {
+    margin-left: 6px;
+    color: #c6a366;
+}
+
+.msc-store-divider {
+    width: 100%;
+    max-width: 520px;
+    height: 1px;
+    margin: 38px 0 25px;
+    background: #39352d;
+}
+
+.msc-store-categories {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.msc-store-categories div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    color: #c9bda8;
+    font-size: 11px;
+}
+
+.msc-store-categories i {
+    color: #d2b078;
+    font-size: 22px;
+}
+
+.msc-store-visual {
+    position: relative;
+    width: min(100%, 400px);
+    aspect-ratio: 1;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+
+.msc-store-orbit {
+    position: absolute;
+    inset: 7%;
+    border: 1px solid #6f5938;
+    border-radius: 50%;
+    box-shadow: 0 0 65px #b8955815;
+    animation: mscStoreOrbit 22s linear infinite;
+}
+
+.msc-store-orbit::before,
+.msc-store-orbit::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #51432d;
+    border-radius: 50%;
+}
+
+.msc-store-orbit::before {
+    inset: 12%;
+}
+
+.msc-store-orbit::after {
+    inset: 25%;
+}
+
+.msc-store-tech-icon {
+    width: 48%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border: 1px solid #9a7947;
+    border-radius: 50%;
+    background: radial-gradient(circle, #393024, #1b1915 70%);
+    box-shadow: 0 0 65px #b8955820;
+}
+
+.msc-store-tech-icon i {
+    color: #d5b47c;
+    font-size: clamp(55px, 7vw, 100px);
+}
+
+.msc-store-floating {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #6f5938;
+    border-radius: 50%;
+    background: #211e19;
+    color: #d5b47c;
+    font-size: 21px;
+    animation: mscStoreFloat 3s ease-in-out infinite;
+}
+
+.msc-store-float-one {
+    top: 8%;
+    right: 17%;
+}
+
+.msc-store-float-two {
+    left: 5%;
+    top: 44%;
+    animation-delay: 0.7s;
+}
+
+.msc-store-float-three {
+    right: 16%;
+    bottom: 8%;
+    animation-delay: 1.2s;
+}
+
+.msc-store-visual-label {
+    position: absolute;
+    bottom: -4px;
+    color: #c6a366;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.msc-store-bottom {
+    padding: 27px 7%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    background: #eae1d3;
+    color: #6b5a40;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+}
+
+.msc-store-footer {
+    padding: 24px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #f7f3eb;
+    color: #766e61;
+    font-size: 12px;
+}
+
+.msc-store-footer a {
+    color: #66553a;
+    text-decoration: none;
+}
+
+@keyframes mscStorePulse {
+    50% {
+        opacity: 0.4;
+        box-shadow: 0 0 3px #d8b575;
+    }
+}
+
+@keyframes mscStoreFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes mscStoreOrbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .msc-store-hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .msc-store-content {
+        margin: auto;
+        text-align: center;
+    }
+
+    .msc-store-description {
+        margin-inline: auto;
+    }
+
+    .msc-store-actions {
+        justify-content: center;
+    }
+
+    .msc-store-divider {
+        margin-inline: auto;
+    }
+
+    .msc-store-categories div {
+        align-items: center;
+    }
+
+    .msc-store-visual {
+        width: min(75vw, 330px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .msc-store-header {
+        min-height: 70px;
+        padding: 14px 5%;
+    }
+
+    .msc-store-brand {
+        gap: 8px;
+    }
+
+    .msc-store-brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .msc-store-brand strong {
+        font-size: 19px;
+    }
+
+    .msc-store-brand small {
+        max-width: 160px;
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .msc-store-home {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .msc-store-hero {
+        padding: 55px 5% 48px;
+        gap: 35px;
+    }
+
+    .msc-store-badge {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .msc-store-content h1 {
+        margin-top: 25px;
+        font-size: clamp(38px, 10vw, 52px);
+        letter-spacing: -1px;
+    }
+
+    .msc-store-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .msc-store-actions {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .msc-store-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .msc-store-categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 12px;
+    }
+
+    .msc-store-visual {
+        width: min(82vw, 290px);
+    }
+
+    .msc-store-floating {
+        width: 47px;
+        height: 47px;
+        font-size: 17px;
+    }
+
+    .msc-store-visual-label {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .msc-store-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px 5%;
+        font-size: 9px;
+    }
+
+    .msc-store-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .msc-store-footer p {
+        margin: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .msc-store-badge span,
+    .msc-store-orbit,
+    .msc-store-floating {
+        animation: none;
+    }
+
+    .msc-store-btn {
+        transition: none;
+    }
+}
+
+
+/* =====================================
+   MSC STORE OFFERINGS
+===================================== */
+
+.msc-store-offerings {
+    padding: 90px 7%;
+    background: #f7f3eb;
+    color: #211e19;
+}
+
+.msc-offerings-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.msc-offerings-heading {
+    max-width: 680px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.msc-offerings-heading>span,
+.msc-offering-group-title>div>span,
+.msc-offerings-cta>div>span {
+    color: #9b7945;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.msc-offerings-heading h2 {
+    margin: 20px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.msc-offerings-heading h2 em {
+    color: #a17d45;
+    font-weight: 400;
+}
+
+.msc-offerings-heading p {
+    color: #777064;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.msc-offering-group {
+    margin-top: 55px;
+}
+
+.msc-offering-group-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.msc-offering-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d7c6a8;
+    border-radius: 50%;
+    color: #987342;
+    font-size: 20px;
+}
+
+.msc-offering-group-title h3 {
+    margin: 7px 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 400;
+}
+
+.msc-offering-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.msc-offering-card {
+    min-width: 0;
+    padding: 27px 22px;
+    border: 1px solid #e5dccd;
+    border-radius: 8px;
+    background: #fffdf9;
+    transition: transform 0.25s ease, border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.msc-offering-card:hover {
+    transform: translateY(-5px);
+    border-color: #b89558;
+    box-shadow: 0 14px 35px #211e190c;
+}
+
+.msc-offering-card>i {
+    margin-bottom: 22px;
+    color: #a17d45;
+    font-size: 26px;
+}
+
+.msc-offering-card h4 {
+    margin: 0 0 11px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.msc-offering-card p {
+    margin: 0;
+    color: #777064;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.msc-offering-services {
+    padding-top: 35px;
+    border-top: 1px solid #e5dccd;
+}
+
+.msc-offering-creative {
+    padding-top: 35px;
+    border-top: 1px solid #e5dccd;
+}
+
+.msc-offerings-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-top: 65px;
+    padding: 35px;
+    border-radius: 8px;
+    background: #211e19;
+    color: #f7f3eb;
+}
+
+.msc-offerings-cta h3 {
+    margin: 12px 0 8px;
+    font-family: Georgia, serif;
+    font-size: clamp(23px, 3vw, 32px);
+    font-weight: 400;
+}
+
+.msc-offerings-cta p {
+    margin: 0;
+    color: #c7c0b4;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.msc-offerings-cta>a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 10px;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: #c6a366;
+    color: #171613;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.25s ease;
+}
+
+.msc-offerings-cta>a:hover {
+    background: #e0c38f;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .msc-offering-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .msc-offerings-cta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .msc-store-offerings {
+        padding: 60px 5%;
+    }
+
+    .msc-offerings-heading {
+        margin-bottom: 45px;
+    }
+
+    .msc-offerings-heading p {
+        font-size: 13px;
+    }
+
+    .msc-offering-group {
+        margin-top: 40px;
+    }
+
+    .msc-offering-group-title {
+        gap: 12px;
+    }
+
+    .msc-offering-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 17px;
+    }
+
+    .msc-offering-group-title>div>span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .msc-offering-group-title h3 {
+        font-size: 23px;
+    }
+
+    .msc-offering-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .msc-offering-card {
+        padding: 20px 14px;
+    }
+
+    .msc-offering-card>i {
+        margin-bottom: 16px;
+        font-size: 23px;
+    }
+
+    .msc-offering-card h4 {
+        font-size: 13px;
+    }
+
+    .msc-offering-card p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .msc-offerings-cta {
+        margin-top: 45px;
+        padding: 25px 20px;
+    }
+
+    .msc-offerings-cta>a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .msc-offering-card,
+    .msc-offerings-cta>a {
+        transition: none;
+    }
+}
+
+
+/* ==========================================
+   MSC CUSTOM PC BUILDER
+========================================== */
+
+.msc-pc-builder {
+    padding: 95px 7%;
+    background: #171613;
+    color: #f7f3eb;
+    overflow: hidden;
+}
+
+.msc-pcb-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 70px;
+}
+
+.msc-pcb-kicker,
+.msc-pcb-eyebrow {
+    color: #d2b078;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.msc-pcb-image {
+    position: relative;
+    margin-top: 25px;
+    aspect-ratio: 4 / 4.5;
+    overflow: hidden;
+    border: 1px solid #50432f;
+    border-radius: 8px;
+}
+
+.msc-pcb-image::after {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(transparent, #171613e8);
+    pointer-events: none;
+}
+
+.msc-pcb-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.msc-pcb-image:hover img {
+    transform: scale(1.04);
+}
+
+.msc-pcb-image-label {
+    position: absolute;
+    z-index: 1;
+    bottom: 22px;
+    left: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e1c18a;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.msc-pcb-image-label i {
+    font-size: 20px;
+}
+
+.msc-pcb-features {
+    display: grid;
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.msc-pcb-features div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #d0c6b5;
+    font-size: 13px;
+}
+
+.msc-pcb-features i {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #53452f;
+    border-radius: 50%;
+    color: #d2b078;
+}
+
+.msc-pcb-content h2 {
+    margin: 18px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.msc-pcb-content h2 em {
+    display: block;
+    color: #d2b078;
+    font-weight: 400;
+}
+
+.msc-pcb-description {
+    color: #c7c0b4;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.msc-pcb-steps {
+    display: grid;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.msc-pcb-steps>div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.msc-pcb-steps>div>span {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #6d5735;
+    border-radius: 50%;
+    color: #d2b078;
+    font-size: 12px;
+}
+
+.msc-pcb-steps p {
+    display: grid;
+    gap: 5px;
+    margin: 0;
+}
+
+.msc-pcb-steps strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.msc-pcb-steps small {
+    color: #aaa194;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.msc-pcb-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 25px;
+    border: 1px solid #494034;
+    border-radius: 8px;
+    background: #211e19;
+}
+
+.msc-pcb-form-heading {
+    grid-column: 1 / -1;
+}
+
+.msc-pcb-form-heading h3 {
+    margin: 0 0 7px;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.msc-pcb-form-heading p {
+    margin: 0;
+    color: #bdb3a3;
+    font-size: 12px;
+}
+
+.msc-pcb-field {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msc-pcb-field label {
+    color: #e7dcc8;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.msc-pcb-field input,
+.msc-pcb-field select,
+.msc-pcb-field textarea {
+    width: 100%;
+    min-height: 46px;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #51483a;
+    border-radius: 4px;
+    outline: none;
+    background: #171613;
+    color: #f7f3eb;
+    font: inherit;
+    font-size: 12px;
+}
+
+.msc-pcb-field textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.msc-pcb-field input:focus,
+.msc-pcb-field select:focus,
+.msc-pcb-field textarea:focus {
+    border-color: #c6a366;
+    box-shadow: 0 0 0 2px #c6a36622;
+}
+
+.msc-pcb-field select option {
+    background: #211e19;
+    color: #f7f3eb;
+}
+
+.msc-pcb-field:nth-of-type(5),
+.msc-pcb-field:nth-of-type(6) {
+    grid-column: 1 / -1;
+}
+
+.msc-pcb-submit {
+    grid-column: 1 / -1;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px;
+    border: 0;
+    border-radius: 4px;
+    background: #c6a366;
+    color: #171613;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.msc-pcb-submit:hover {
+    background: #e0c38f;
+    transform: translateY(-2px);
+}
+
+.msc-pcb-note,
+.msc-pcb-status {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #bdb3a3;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.msc-pcb-status:not(:empty) {
+    color: #e1c18a;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    .msc-pc-builder {
+        padding: 70px 5%;
+    }
+
+    .msc-pcb-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        max-width: 700px;
+    }
+
+    .msc-pcb-image {
+        max-height: 480px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .msc-pcb-content h2 {
+        font-size: clamp(38px, 7vw, 55px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .msc-pc-builder {
+        padding: 55px 5%;
+    }
+
+    .msc-pcb-container {
+        gap: 35px;
+    }
+
+    .msc-pcb-image {
+        aspect-ratio: 1 / 1;
+    }
+
+    .msc-pcb-content h2 {
+        font-size: 39px;
+    }
+
+    .msc-pcb-description {
+        font-size: 13px;
+    }
+
+    .msc-pcb-form {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 19px 15px;
+    }
+
+    .msc-pcb-form-heading,
+    .msc-pcb-field,
+    .msc-pcb-field:nth-of-type(5),
+    .msc-pcb-field:nth-of-type(6),
+    .msc-pcb-submit,
+    .msc-pcb-note,
+    .msc-pcb-status {
+        grid-column: 1 / -1;
+    }
+
+    .msc-pcb-form-heading h3 {
+        font-size: 23px;
+    }
+
+    .msc-pcb-field input,
+    .msc-pcb-field select,
+    .msc-pcb-field textarea {
+        font-size: 16px;
+    }
+
+    .msc-pcb-submit {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .msc-pcb-image img,
+    .msc-pcb-submit {
+        transition: none;
+    }
+}
+
+
+/* ===== MSC STORE CINEMATIC VIDEO HERO ===== */
+
+.msc-store-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #080808;
+}
+
+.msc-store-video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 75% 50%, #302516 0%, #11100d 45%, #080808 100%);
+}
+
+.msc-store-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.68;
+}
+
+.msc-store-video-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg,
+            rgba(5, 5, 5, 0.97) 0%,
+            rgba(5, 5, 5, 0.88) 35%,
+            rgba(5, 5, 5, 0.48) 68%,
+            rgba(5, 5, 5, 0.65) 100%),
+        linear-gradient(0deg,
+            #080808 0%,
+            transparent 35%,
+            rgba(0, 0, 0, 0.15) 100%);
+}
+
+/* Keep hero content above video */
+.msc-store-content,
+.msc-store-visual {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .msc-store-hero-video {
+        object-position: 65% center;
+        opacity: 0.48;
+    }
+
+    .msc-store-video-overlay {
+        background: linear-gradient(90deg,
+                rgba(5, 5, 5, 0.88),
+                rgba(5, 5, 5, 0.65));
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .msc-store-hero-video {
+        display: none;
+    }
+}
+
+/* =====================================
+   STORE HERO VIDEO FIX + REMOVE ORBIT
+===================================== */
+.msc-store-hero {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    min-height: 650px;
+    padding: clamp(70px, 9vw, 120px) 7%;
+    background: #080808;
+}
+
+.msc-store-video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #080808;
+    pointer-events: none;
+}
+
+.msc-store-hero-video {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    opacity: .72;
+}
+
+.msc-store-video-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(5, 5, 5, .94) 0%, rgba(5, 5, 5, .78) 42%, rgba(5, 5, 5, .30) 100%),
+        linear-gradient(0deg, #080808 0%, rgba(8, 8, 8, .05) 55%, rgba(8, 8, 8, .28) 100%);
+}
+
+.msc-store-content {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 760px);
+    max-width: 760px;
+}
+
+.msc-store-hero .msc-store-glow {
+    z-index: 1;
+    pointer-events: none;
+}
+
+.msc-store-hero .msc-store-visual {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .msc-store-hero {
+        min-height: 600px;
+        padding: 70px 6%;
+    }
+
+    .msc-store-hero-video {
+        object-position: 60% center;
+        opacity: .55;
+    }
+
+    .msc-store-video-overlay {
+        background: linear-gradient(90deg, rgba(5, 5, 5, .88), rgba(5, 5, 5, .52)),
+            linear-gradient(0deg, #080808 0%, transparent 55%);
+    }
+}
+
+@media (max-width: 520px) {
+    .msc-store-hero {
+        min-height: 650px;
+        padding: 55px 5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .msc-store-hero-video {
+        object-position: 62% center;
+        opacity: .43;
+    }
+
+    .msc-store-content {
+        width: 100%;
+    }
+}
+
+/* AEO-friendly visible FAQ section */
+.msc-store-faq {
+    padding: 70px 7%;
+    background: #211e19;
+    color: #f7f3eb;
+}
+
+.msc-store-faq-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.msc-store-faq-inner>span {
+    color: #c6a366;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.msc-store-faq-inner h2 {
+    margin: 12px 0 25px;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.msc-store-faq details {
+    padding: 18px 0;
+    border-bottom: 1px solid #494237;
+}
+
+.msc-store-faq summary {
+    cursor: pointer;
+    color: #ead7b4;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.msc-store-faq details p {
+    margin-top: 12px;
+    max-width: 760px;
+    color: #c7c0b4;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (max-width: 520px) {
+    .msc-store-faq {
+        padding: 55px 5%;
+    }
+}
+
+
+/* ==============================
+   MSC WEDDING PRICING
+================================ */
+
+.msc-wedding-pricing {
+    padding: 110px 20px;
+    background: #f8f5ee;
+    color: #211b15;
+}
+
+.msc-wp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.msc-wp-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.msc-wp-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #a17b3c;
+    margin-bottom: 20px;
+}
+
+.msc-wp-heading h2 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+    margin: 0 0 22px;
+}
+
+.msc-wp-heading h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    color: #b28b4d;
+}
+
+.msc-wp-heading p {
+    font-size: 15px;
+    color: #77716a;
+    line-height: 1.9;
+}
+
+.msc-wp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.msc-wp-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 38px 30px 30px;
+    border: 1px solid #e8dfd0;
+    border-radius: 20px;
+    background: #fff;
+    transition: transform .35s ease, box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.msc-wp-card:hover {
+    transform: translateY(-10px);
+    border-color: #c9a56a;
+    box-shadow: 0 22px 55px rgba(70, 48, 19, .12);
+}
+
+.msc-wp-featured {
+    background: #201c18;
+    border-color: #b9965a;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(31, 25, 18, .16);
+}
+
+.msc-wp-popular {
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 11px 21px;
+    background: #c9a56a;
+    color: #211b15;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.msc-wp-popular i {
+    margin-right: 6px;
+}
+
+.msc-wp-package {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #b28b4d;
+}
+
+.msc-wp-symbol {
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 25px 0;
+    border-radius: 15px;
+    background: #f6eee0;
+    color: #b28b4d;
+    font-size: 23px;
+}
+
+.msc-wp-featured .msc-wp-symbol {
+    background: rgba(201, 165, 106, .13);
+    color: #d9b878;
+}
+
+.msc-wp-card h3 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.msc-wp-card-top>p {
+    color: #81796f;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.msc-wp-featured .msc-wp-card-top>p {
+    color: #b9b0a5;
+}
+
+.msc-wp-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 30px;
+}
+
+.msc-wp-price>span,
+.msc-wp-price small {
+    font-size: 12px;
+    color: #81796f;
+}
+
+.msc-wp-price strong {
+    font-size: clamp(36px, 3.5vw, 46px);
+    letter-spacing: -2px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.msc-wp-featured .msc-wp-price strong {
+    color: #e6c489;
+}
+
+.msc-wp-featured .msc-wp-price>span,
+.msc-wp-featured .msc-wp-price small {
+    color: #b9b0a5;
+}
+
+.msc-wp-line {
+    height: 1px;
+    background: #eee5d9;
+    margin: 28px 0;
+}
+
+.msc-wp-featured .msc-wp-line {
+    background: rgba(255, 255, 255, .14);
+}
+
+.msc-wp-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    flex: 1;
+}
+
+.msc-wp-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #615a52;
+}
+
+.msc-wp-features li i {
+    color: #b28b4d;
+    margin-top: 4px;
+}
+
+.msc-wp-featured .msc-wp-features li {
+    color: #e1d8cd;
+}
+
+.msc-wp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    padding: 17px 19px;
+    border-radius: 10px;
+    background: #25201b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.msc-wp-btn:hover {
+    background: #b28b4d;
+    transform: translateY(-2px);
+}
+
+.msc-wp-featured .msc-wp-btn {
+    background: #d1ac70;
+    color: #201c18;
+}
+
+.msc-wp-featured .msc-wp-btn:hover {
+    background: #f0d39f;
+}
+
+.msc-wp-footer {
+    margin-top: 50px;
+    padding: 27px 32px;
+    border: 1px solid #e8dfd0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+}
+
+.msc-wp-footer>i {
+    font-size: 27px;
+    color: #b28b4d;
+}
+
+.msc-wp-footer p {
+    flex: 1;
+    color: #77716a;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.msc-wp-footer strong {
+    color: #211b15;
+}
+
+.msc-wp-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: #211b15;
+    color: #fff;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .msc-wp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 35px;
+    }
+
+    .msc-wp-footer {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) {
+    .msc-wedding-pricing {
+        padding: 75px 16px;
+    }
+
+    .msc-wp-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .msc-wp-card {
+        padding: 34px 25px 25px;
+    }
+
+    .msc-wp-heading {
+        margin-bottom: 45px;
+    }
+
+    .msc-wp-heading h2 {
+        font-size: 36px;
+    }
+
+    .msc-wp-footer {
+        padding: 24px;
+    }
+
+    .msc-wp-footer a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .msc-wp-card,
+    .msc-wp-btn {
+        transition: none;
+    }
+
+    .msc-wp-card:hover,
+    .msc-wp-btn:hover {
+        transform: none;
+    }
+}
+
+
+/* ==============================
+   MSC WEDDING PRICING
+================================ */
+
+.msc-wedding-pricing {
+  padding: 110px 20px;
+  background: #f8f5ee;
+  color: #211b15;
+}
+
+.msc-wp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.msc-wp-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 60px;
+}
+
+.msc-wp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a17b3c;
+  margin-bottom: 20px;
+}
+
+.msc-wp-heading h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.13;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+  margin: 0 0 22px;
+}
+
+.msc-wp-heading h2 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: #b28b4d;
+}
+
+.msc-wp-heading p {
+  font-size: 15px;
+  color: #77716a;
+  line-height: 1.9;
+}
+
+.msc-wp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+}
+
+.msc-wp-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 30px 30px;
+  border: 1px solid #e8dfd0;
+  border-radius: 20px;
+  background: #fff;
+  transition: transform .35s ease, box-shadow .35s ease,
+              border-color .35s ease;
+}
+
+.msc-wp-card:hover {
+  transform: translateY(-10px);
+  border-color: #c9a56a;
+  box-shadow: 0 22px 55px rgba(70, 48, 19, .12);
+}
+
+.msc-wp-featured {
+  background: #201c18;
+  border-color: #b9965a;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(31, 25, 18, .16);
+}
+
+.msc-wp-popular {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 11px 21px;
+  background: #c9a56a;
+  color: #211b15;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.msc-wp-popular i {
+  margin-right: 6px;
+}
+
+.msc-wp-package {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #b28b4d;
+}
+
+.msc-wp-symbol {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin: 25px 0;
+  border-radius: 15px;
+  background: #f6eee0;
+  color: #b28b4d;
+  font-size: 23px;
+}
+
+.msc-wp-featured .msc-wp-symbol {
+  background: rgba(201, 165, 106, .13);
+  color: #d9b878;
+}
+
+.msc-wp-card h3 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.msc-wp-card-top > p {
+  color: #81796f;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.msc-wp-featured .msc-wp-card-top > p {
+  color: #b9b0a5;
+}
+
+.msc-wp-price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 30px;
+}
+
+.msc-wp-price > span,
+.msc-wp-price small {
+  font-size: 12px;
+  color: #81796f;
+}
+
+.msc-wp-price strong {
+  font-size: clamp(36px, 3.5vw, 46px);
+  letter-spacing: -2px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.msc-wp-featured .msc-wp-price strong {
+  color: #e6c489;
+}
+
+.msc-wp-featured .msc-wp-price > span,
+.msc-wp-featured .msc-wp-price small {
+  color: #b9b0a5;
+}
+
+.msc-wp-line {
+  height: 1px;
+  background: #eee5d9;
+  margin: 28px 0;
+}
+
+.msc-wp-featured .msc-wp-line {
+  background: rgba(255,255,255,.14);
+}
+
+.msc-wp-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  flex: 1;
+}
+
+.msc-wp-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #615a52;
+}
+
+.msc-wp-features li i {
+  color: #b28b4d;
+  margin-top: 4px;
+}
+
+.msc-wp-featured .msc-wp-features li {
+  color: #e1d8cd;
+}
+
+.msc-wp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 17px 19px;
+  border-radius: 10px;
+  background: #25201b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.msc-wp-btn:hover {
+  background: #b28b4d;
+  transform: translateY(-2px);
+}
+
+.msc-wp-featured .msc-wp-btn {
+  background: #d1ac70;
+  color: #201c18;
+}
+
+.msc-wp-featured .msc-wp-btn:hover {
+  background: #f0d39f;
+}
+
+.msc-wp-footer {
+  margin-top: 50px;
+  padding: 27px 32px;
+  border: 1px solid #e8dfd0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+}
+
+.msc-wp-footer > i {
+  font-size: 27px;
+  color: #b28b4d;
+}
+
+.msc-wp-footer p {
+  flex: 1;
+  color: #77716a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.msc-wp-footer strong {
+  color: #211b15;
+}
+
+.msc-wp-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #211b15;
+  color: #fff;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 991px) {
+  .msc-wp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 35px;
+  }
+
+  .msc-wp-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 650px) {
+  .msc-wedding-pricing {
+    padding: 75px 16px;
+  }
+
+  .msc-wp-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .msc-wp-card {
+    padding: 34px 25px 25px;
+  }
+
+  .msc-wp-heading {
+    margin-bottom: 45px;
+  }
+
+  .msc-wp-heading h2 {
+    font-size: 36px;
+  }
+
+  .msc-wp-footer {
+    padding: 24px;
+  }
+
+  .msc-wp-footer a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .msc-wp-card,
+  .msc-wp-btn {
+    transition: none;
+  }
+
+  .msc-wp-card:hover,
+  .msc-wp-btn:hover {
+    transform: none;
+  }
+}
