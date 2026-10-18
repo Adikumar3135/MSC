@@ -298,3 +298,126 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
+/* MSC WEDDING AVAILABILITY: city coverage + WhatsApp enquiry */
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("availability-form");
+  if (!form) return;
+
+  const stateSelect = document.getElementById("msc-state");
+  const citySelect = document.getElementById("msc-city");
+  const dateInput = document.getElementById("msc-date");
+  const otherWrap = document.getElementById("msc-city-other-wrap");
+  const otherInput = document.getElementById("msc-city-other");
+  const message = document.getElementById("availability-message");
+  const whatsappNumber = "919431462683";
+
+  const citiesByState = {
+    "Bihar": [
+      "Patna", "Bhagalpur", "Munger", "Jamalpur", "Kahalgaon", "Gaya",
+      "Muzaffarpur", "Darbhanga", "Purnia", "Begusarai", "Katihar", "Saharsa",
+      "Araria", "Kishanganj", "Madhepura", "Supaul", "Khagaria", "Banka", "Jamui",
+      "Lakhisarai", "Sheikhpura", "Bihar Sharif", "Nalanda", "Hajipur", "Vaishali",
+      "Chhapra", "Siwan", "Gopalganj", "Motihari", "Bettiah", "Sitamarhi", "Madhubani",
+      "Samastipur", "Sonepur", "Ara", "Buxar", "Sasaram", "Aurangabad", "Jehanabad",
+      "Nawada", "Dehri", "Other Bihar city / town"
+    ],
+    "Jharkhand": [
+      "Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Deoghar", "Dumka", "Giridih",
+      "Hazaribagh", "Ramgarh", "Medininagar (Palamu)", "Garhwa", "Chatra", "Koderma",
+      "Lohardaga", "Gumla", "Simdega", "Khunti", "Seraikela", "Chaibasa", "Sahibganj",
+      "Tinpahar", "Rajmahal", "Barharwa", "Pakur", "Godda", "Jamtara", "Other Jharkhand city / town"
+    ],
+    "West Bengal": [
+      "Kolkata", "Asansol", "Durgapur", "Siliguri", "Howrah", "Malda", "Other West Bengal city / town"
+    ],
+    "Other / outside listed states": ["Enter city or town"]
+  };
+
+  function localISODate() {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  }
+
+  dateInput.min = localISODate();
+
+  function updateCities() {
+    const cities = citiesByState[stateSelect.value] || ["Enter city or town"];
+    citySelect.replaceChildren();
+    cities.forEach(function (city) {
+      const option = document.createElement("option");
+      option.value = city;
+      option.textContent = city;
+      citySelect.appendChild(option);
+    });
+    citySelect.selectedIndex = 0;
+    updateOtherCityVisibility();
+    message.textContent = "";
+  }
+
+  function updateOtherCityVisibility() {
+    const needsOther = /Other .*city \/ town|Enter city or town/.test(citySelect.value) ||
+      stateSelect.value === "Other / outside listed states";
+    otherWrap.hidden = !needsOther;
+    otherInput.required = needsOther;
+    if (!needsOther) otherInput.value = "";
+  }
+
+  stateSelect.addEventListener("change", updateCities);
+  citySelect.addEventListener("change", updateOtherCityVisibility);
+  dateInput.addEventListener("change", function () { message.textContent = ""; });
+  updateCities();
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const selectedDate = dateInput.value;
+    if (selectedDate < localISODate()) {
+      message.textContent = "Please choose today or a future date.";
+      dateInput.focus();
+      return;
+    }
+
+    const state = stateSelect.value;
+    const city = otherWrap.hidden ? citySelect.value : otherInput.value.trim();
+    if (!city) {
+      message.textContent = "Please enter your city, town or venue.";
+      otherInput.focus();
+      return;
+    }
+
+    const formattedDate = new Date(selectedDate + "T12:00:00").toLocaleDateString("en-IN", {
+      day: "2-digit", month: "long", year: "numeric"
+    });
+    const text = [
+      "Hello MSC - Multimedia Solutions Cafe!",
+      "I would like to check wedding photography / cinematic film availability.",
+      "State: " + state,
+      "City / Town / Venue: " + city,
+      "Wedding Date: " + formattedDate,
+      "Please confirm whether a local team is available and share suitable packages."
+    ].join("\n");
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+    message.textContent = "Opening WhatsApp with your enquiry. Availability is not confirmed until the MSC team replies.";
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+});
+
+/* Accessible state for selectable network region cards */
+(function () {
+  const section = document.querySelector("#wedding-network");
+  if (!section) return;
+  const cards = section.querySelectorAll(".region-card");
+  const heading = section.querySelector("#reach-cta-title");
+  cards.forEach(function (card) {
+    card.setAttribute("aria-pressed", String(card.classList.contains("selected")));
+    card.addEventListener("click", function () {
+      cards.forEach(function (item) {
+        const active = item === card;
+        item.classList.toggle("selected", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      if (heading) heading.textContent = "Planning a wedding in " + card.dataset.region + "? Tell us your town and date.";
+    });
+  });
+})();
