@@ -421,3 +421,113 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 })();
+
+
+// MSC Portfolio Filters
+document.querySelectorAll(".msc-work").forEach((section) => {
+  const filters = section.querySelectorAll(".msc-filter");
+  const cards = section.querySelectorAll(".msc-work-card");
+
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      filters.forEach((button) => {
+        button.classList.remove("active");
+        button.removeAttribute("aria-pressed");
+      });
+
+      filter.classList.add("active");
+      filter.setAttribute("aria-pressed", "true");
+
+      const category = filter.dataset.filter;
+
+      cards.forEach((card) => {
+        card.hidden =
+          category !== "all" &&
+          card.dataset.category !== category;
+      });
+    });
+
+    filter.setAttribute(
+      "aria-pressed",
+      filter.classList.contains("active") ? "true" : "false"
+    );
+  });
+});
+
+// MSC Image & Video Lightbox
+(() => {
+  const viewer = document.getElementById("mscViewer");
+  const closeButton = document.getElementById("mscViewerClose");
+  const backdrop = document.getElementById("mscViewerBackdrop");
+  const image = document.getElementById("mscViewerImage");
+  const video = document.getElementById("mscViewerVideo");
+
+  if (!viewer || !closeButton || !backdrop || !image || !video) return;
+
+  let previousFocus = null;
+
+  function openViewer(type, src, trigger) {
+    if (!src || src.startsWith("YOUR_")) {
+      alert("Please add your actual video URL in the portfolio HTML.");
+      return;
+    }
+
+    previousFocus = trigger;
+    image.classList.remove("is-visible");
+    video.classList.remove("is-visible");
+
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+    image.removeAttribute("src");
+
+    viewer.classList.add("is-open");
+    viewer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("msc-viewer-open");
+
+    if (type === "video") {
+      video.src = src;
+      video.classList.add("is-visible");
+      video.load();
+      video.play().catch(() => {
+        // User can start playback using the video controls.
+      });
+    } else {
+      image.src = src;
+      image.classList.add("is-visible");
+    }
+
+    closeButton.focus();
+  }
+
+  function closeViewer() {
+    if (!viewer.classList.contains("is-open")) return;
+
+    viewer.classList.remove("is-open");
+    viewer.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("msc-viewer-open");
+
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+
+    image.removeAttribute("src");
+    image.classList.remove("is-visible");
+    video.classList.remove("is-visible");
+
+    if (previousFocus) previousFocus.focus();
+  }
+
+  document.querySelectorAll(".msc-work-media").forEach((button) => {
+    button.addEventListener("click", () => {
+      openViewer(button.dataset.type, button.dataset.src, button);
+    });
+  });
+
+  closeButton.addEventListener("click", closeViewer);
+  backdrop.addEventListener("click", closeViewer);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeViewer();
+  });
+})();
