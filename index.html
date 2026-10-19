@@ -547,7 +547,7 @@
               <img
                 alt="Traditional wedding couple"
                 loading="lazy"
-                src="data/Couple-img.avif"
+                src="data/DSC07146.jpg.jpeg"
               />
               <div class="msc-about-image-caption">
                 <span class="msc-about-caption-icon"
@@ -561,7 +561,7 @@
                 <img
                   alt="Creative editing workspace"
                   loading="lazy"
-                  src="data/Editing-img.jpg"
+                  src="data/DSC07343.jpg.jpeg"
                 />
               </div>
               <div class="msc-about-video">
@@ -573,13 +573,13 @@
                   poster=""
                   preload="metadata"
                 >
-                  <source src="data/Camera-Behind.mp4" type="video/mp4" />
+                  <source src="data/Hero-reel.mp4" type="video/mp4" />
                 </video>
                 <span class="msc-about-video-label">
                   <span
                     ><i class="fa-solid fa-play" aria-hidden="true"></i
                   ></span>
-                  Behind the scenes
+                  After Edit
                 </span>
               </div>
             </div>
@@ -1002,10 +1002,10 @@
                 class="msc-fr-video"
                 controls=""
                 playsinline=""
-                poster="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+                poster="data/Girl-Bride.jpeg"
                 preload="metadata"
               >
-                <source src="data/Couple-kiss.mp4" type="video/mp4" />
+                <source src="data/MSC 4.mp4" type="video/mp4" />
                 Your browser does not support HTML video.
               </video>
               <span class="msc-fr-video-tag">WEDDING FILM</span>
@@ -1028,10 +1028,10 @@
                 class="msc-fr-video"
                 controls=""
                 playsinline=""
-                poster="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+                poster="data/Couple-img.webp"
                 preload="metadata"
               >
-                <source src="data/Camera-Behind.mp4" type="video/mp4" />
+                <source src="data/Couple-kiss.mp4" type="video/mp4" />
                 Your browser does not support HTML video.
               </video>
               <span class="msc-fr-video-tag">COUPLE MOMENTS</span>
@@ -1054,10 +1054,10 @@
                 class="msc-fr-video"
                 controls=""
                 playsinline=""
-                poster="https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+                poster="data/DSC06370.jpg.jpeg"
                 preload="metadata"
               >
-                <source src="data/haldi.mp4" type="video/mp4" />
+                <source src="data/MSC 3 (1).mp4" type="video/mp4" />
                 Your browser does not support HTML video.
               </video>
               <span class="msc-fr-video-tag">WEDDING HIGHLIGHTS</span>
@@ -1342,220 +1342,309 @@
       </div>
     </section>
 
-    <!-- MSC PORTFOLIO SECTION -->
-    <section class="msc-portfolio" id="portfolio">
-      <div class="msc-portfolio-container">
-        <div class="msc-portfolio-header">
+    <!-- MSC PREMIUM PORTFOLIO -->
+    <section class="msc-work" id="portfolio">
+      <div class="msc-work-container">
+        <header class="msc-work-header">
           <div>
-            <p class="msc-portfolio-eyebrow"><span></span> OUR SELECTED WORK</p>
-            <h2 class="msc-portfolio-title">
-              Stories worth
-              <em>remembering.</em>
+            <span class="msc-work-eyebrow">✦ MULTIMEDIA SOLUTION CAFE</span>
+            <h2>
+              Every frame tells<br />
+              <em>a beautiful story.</em>
             </h2>
           </div>
-          <p class="msc-portfolio-intro">
-            A collection of real emotions, beautiful celebrations and frames
-            captured with care.
+          <p>
+            From timeless wedding albums to cinematic films and creative reels,
+            explore our world of visual storytelling.
           </p>
+        </header>
+
+        <!-- FILTERS -->
+        <nav class="msc-work-filters" aria-label="Portfolio categories">
+          <button class="msc-filter active" data-filter="all">All Work</button>
+          <button class="msc-filter" data-filter="photo">Photography</button>
+          <button class="msc-filter" data-filter="album">Albums</button>
+          <button class="msc-filter" data-filter="reel">Reels</button>
+          <button class="msc-filter" data-filter="video">
+            Cinematic Films
+          </button>
+        </nav>
+
+        <!-- PORTFOLIO GRID -->
+        <div class="msc-work-grid">
+          <!-- PHOTO 1 -->
+          <article class="msc-work-card tall" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/Girl-Bride.jpeg"
+              aria-label="View wedding photograph"
+            >
+              <img
+                loading="lazy"
+                src="data/Girl-Bride.jpeg"
+                alt="Wedding photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">WEDDING PHOTOGRAPHY</span>
+                <span class="msc-card-title">Moments of Love</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <!-- ALBUM -->
+          <article class="msc-work-card" data-category="album">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/Wediing-Album.png"
+              aria-label="Preview wedding album photograph"
+            >
+              <img
+                loading="lazy"
+                src="data/Wediing-Album.png"
+                alt="Wedding album memories"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">WEDDING ALBUMS</span>
+                <span class="msc-card-title">Memories in Print</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <!-- REEL -->
+          <article class="msc-work-card" data-category="reel">
+            <button
+              class="msc-work-media"
+              data-type="video"
+              data-src="data/MSC 5.mp4"
+              aria-label="Play wedding reel"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC06314.jpg.jpeg"
+                alt="Wedding reel cover"
+              />
+              <span class="msc-play-icon">▶</span>
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">WEDDING REEL · 9:16</span>
+                <span class="msc-card-title">A Moment in Motion</span>
+                <span class="msc-card-action">▶</span>
+              </span>
+            </button>
+          </article>
+
+          <!-- CINEMATIC VIDEO -->
+          <article class="msc-work-card wide" data-category="video">
+            <button
+              class="msc-work-media"
+              data-type="video"
+              data-src="data/MSC 6.mp4"
+              aria-label="Play cinematic wedding film"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC07146.jpg.jpeg"
+                alt="Cinematic wedding film cover"
+              />
+              <span class="msc-play-icon">▶</span>
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CINEMATIC FILMS</span>
+                <span class="msc-card-title">The Wedding Story</span>
+                <span class="msc-card-action">▶</span>
+              </span>
+            </button>
+          </article>
+
+          <!-- PHOTO 2 -->
+          <article class="msc-work-card" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/DSC06343.jpg.jpeg"
+              aria-label="View creative photography"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC06343.jpg.jpeg"
+                alt="Creative visual photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CREATIVE STUDIO</span>
+                <span class="msc-card-title">Behind the Vision</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+          <article class="msc-work-card" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/DSC06314.jpg.jpeg"
+              aria-label="View creative photography"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC06314.jpg.jpeg"
+                alt="Creative visual photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CREATIVE STUDIO</span>
+                <span class="msc-card-title">Behind the Vision</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="msc-work-card" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/DSC06370.jpg.jpeg"
+              aria-label="View creative photography"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC06370.jpg.jpeg"
+                alt="Creative visual photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CREATIVE STUDIO</span>
+                <span class="msc-card-title">Behind the Vision</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="msc-work-card" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/DSC07051.jpg.jpeg"
+              aria-label="View creative photography"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC07051.jpg.jpeg"
+                alt="Creative visual photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CREATIVE STUDIO</span>
+                <span class="msc-card-title">Behind the Vision</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="msc-work-card" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/DSC07146.jpg.jpeg"
+              aria-label="View creative photography"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC07146.jpg.jpeg"
+                alt="Creative visual photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CREATIVE STUDIO</span>
+                <span class="msc-card-title">Behind the Vision</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="msc-work-card" data-category="photo">
+            <button
+              class="msc-work-media"
+              data-type="image"
+              data-src="data/DSC07343.jpg.jpeg"
+              aria-label="View creative photography"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC07343.jpg.jpeg"
+                alt="Creative visual photography"
+              />
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">CREATIVE STUDIO</span>
+                <span class="msc-card-title">Behind the Vision</span>
+                <span class="msc-card-action">↗</span>
+              </span>
+            </button>
+          </article>
+
+          <!-- REEL 2 -->
+          <article class="msc-work-card" data-category="reel">
+            <button
+              class="msc-work-media"
+              data-type="video"
+              data-src="data/MSC 7.mp4"
+              aria-label="Play wedding reel"
+            >
+              <img
+                loading="lazy"
+                src="data/DSC07343.jpg.jpeg"
+                alt="Wedding reel cover"
+              />
+              <span class="msc-play-icon">▶</span>
+              <span class="msc-card-overlay">
+                <span class="msc-card-tag">WEDDING REEL</span>
+                <span class="msc-card-title">Just You & Me</span>
+                <span class="msc-card-action">▶</span>
+              </span>
+            </button>
+          </article>
         </div>
-        <!-- Gallery Filters -->
-        <div
-          aria-label="Filter portfolio"
-          class="msc-portfolio-filters"
-          role="group"
-        >
-          <button
-            class="msc-portfolio-filter active"
-            data-filter="all"
-            type="button"
-          >
-            All Work
-          </button>
-          <button
-            class="msc-portfolio-filter"
-            data-filter="wedding"
-            type="button"
-          >
-            Weddings
-          </button>
-          <button
-            class="msc-portfolio-filter"
-            data-filter="cinematic"
-            type="button"
-          >
-            Cinematic
-          </button>
-          <button
-            class="msc-portfolio-filter"
-            data-filter="creative"
-            type="button"
-          >
-            Creative
-          </button>
-        </div>
-        <!-- Portfolio Grid -->
-        <div class="msc-portfolio-grid">
-          <button
-            aria-label="View wedding photography"
-            class="msc-portfolio-item msc-portfolio-tall"
-            data-category="wedding"
-            data-full="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-            type="button"
-          >
-            <img
-              alt="Wedding photography"
-              loading="lazy"
-              src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
-            />
-            <span class="msc-portfolio-overlay">
-              <span class="msc-portfolio-label">WEDDING PHOTOGRAPHY</span>
-              <span class="msc-portfolio-item-title">Moments of Love</span>
-              <span class="msc-portfolio-zoom"
-                ><i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></span>
-            </span>
-          </button>
-          <button
-            aria-label="View cinematic photography"
-            class="msc-portfolio-item"
-            data-category="cinematic"
-            data-full="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-            type="button"
-          >
-            <img
-              alt="Cinematic wedding moment"
-              loading="lazy"
-              src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
-            />
-            <span class="msc-portfolio-overlay">
-              <span class="msc-portfolio-label">CINEMATIC</span>
-              <span class="msc-portfolio-item-title">A Story in Frames</span>
-              <span class="msc-portfolio-zoom"
-                ><i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></span>
-            </span>
-          </button>
-          <button
-            aria-label="View creative work"
-            class="msc-portfolio-item"
-            data-category="creative"
-            data-full="https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-            type="button"
-          >
-            <img
-              alt="Creative visual production"
-              loading="lazy"
-              src="https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-            />
-            <span class="msc-portfolio-overlay">
-              <span class="msc-portfolio-label">CREATIVE STUDIO</span>
-              <span class="msc-portfolio-item-title">Behind the Vision</span>
-              <span class="msc-portfolio-zoom"
-                ><i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></span>
-            </span>
-          </button>
-          <button
-            aria-label="View wedding album photography"
-            class="msc-portfolio-item"
-            data-category="wedding"
-            data-full="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-            type="button"
-          >
-            <img
-              alt="Wedding memories"
-              loading="lazy"
-              src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
-            />
-            <span class="msc-portfolio-overlay">
-              <span class="msc-portfolio-label">WEDDING STORIES</span>
-              <span class="msc-portfolio-item-title">Forever Together</span>
-              <span class="msc-portfolio-zoom"
-                ><i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></span>
-            </span>
-          </button>
-          <button
-            aria-label="View cinematic wedding story"
-            class="msc-portfolio-item msc-portfolio-wide"
-            data-category="cinematic"
-            data-full="https://images.pexels.com/photos/14819980/pexels-photo-14819980.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
-            type="button"
-          >
-            <img
-              alt="Cinematic wedding story"
-              loading="lazy"
-              src="https://images.pexels.com/photos/14819980/pexels-photo-14819980.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
-            />
-            <span class="msc-portfolio-overlay">
-              <span class="msc-portfolio-label">CINEMATIC FILMS</span>
-              <span class="msc-portfolio-item-title">The Wedding Story</span>
-              <span class="msc-portfolio-zoom"
-                ><i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></span>
-            </span>
-          </button>
-        </div>
-        <div class="msc-portfolio-footer">
+
+        <footer class="msc-work-footer">
           <p>Every photograph holds a story of its own.</p>
-          <a class="msc-portfolio-cta" href="#wedding-enquiry">
-            Create Your Story
-            <span
-              ><i
-                class="fa-solid fa-arrow-up-right-from-square"
-                aria-hidden="true"
-              ></i
-            ></span>
+          <a href="#wedding-enquiry" class="msc-work-cta">
+            Create Your Story <span>↗</span>
           </a>
-        </div>
+        </footer>
       </div>
     </section>
-    <!-- PORTFOLIO LIGHTBOX -->
+
+    <!-- IMAGE / VIDEO LIGHTBOX -->
     <div
-      aria-hidden="true"
-      aria-label="Portfolio image preview"
-      aria-modal="true"
-      class="msc-lightbox"
-      id="mscLightbox"
+      class="msc-viewer"
+      id="mscViewer"
       role="dialog"
+      aria-modal="true"
+      aria-label="Portfolio preview"
+      aria-hidden="true"
     >
       <button
-        aria-label="Close image preview"
-        class="msc-lightbox-close"
-        id="mscLightboxClose"
-        type="button"
+        class="msc-viewer-close"
+        id="mscViewerClose"
+        aria-label="Close preview"
       >
         ×
       </button>
+
       <button
-        aria-label="Close image preview"
-        class="msc-lightbox-backdrop"
-        id="mscLightboxBackdrop"
-        type="button"
+        class="msc-viewer-backdrop"
+        id="mscViewerBackdrop"
+        aria-label="Close preview"
       ></button>
-      <img
-        alt="Expanded portfolio image"
-        class="msc-lightbox-image"
-        id="mscLightboxImage"
-        src=""
-      />
+
+      <div class="msc-viewer-content" id="mscViewerContent">
+        <img id="mscViewerImage" alt="Expanded portfolio image" />
+        <video
+          id="mscViewerVideo"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
     </div>
     <!-- END MSC PORTFOLIO -->
+
     <!-- MSC OUR PROCESS SECTION -->
     <section class="msc-process" id="our-process">
       <div class="msc-process-container">
@@ -1669,7 +1758,12 @@
         </div>
         <div class="msc-reviews-grid">
           <article class="msc-review-card">
-            <div class="msc-review-quote">“</div>
+            <div class="msc-review-quote">
+              <img
+                src="https://s3.amazonaws.com/appforest_uf/f1512936020165x278911292087286720/A.png"
+                alt=""
+              />
+            </div>
             <p>
               Every project has its own story. We aim to understand your
               expectations and deliver a service that suits your needs.
@@ -1683,7 +1777,13 @@
             </div>
           </article>
           <article class="msc-review-card msc-review-card-featured">
-            <div class="msc-review-quote">“</div>
+            <div class="msc-review-quote">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCDl_oAWESZ90JzOkwFPLQs0RMHsVTk_FtIWBnNVhHrXcdmnGs5WknzDQ&s=10"
+                style="border-radius: 50%"
+                alt=""
+              />
+            </div>
             <p>
               Your feedback helps us improve our photography, creative work and
               customer experience. Share your experience with MSC.
@@ -1697,7 +1797,12 @@
             </div>
           </article>
           <article class="msc-review-card">
-            <div class="msc-review-quote">“</div>
+            <div class="msc-review-quote">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8999/8999982.png"
+                alt=""
+              />
+            </div>
             <p>
               From memorable celebrations to everyday technology needs, we value
               clear communication and helpful support.
@@ -1824,7 +1929,7 @@
           <img
             alt="Professional photographer working with a camera on a shoot"
             loading="lazy"
-            src="https://images.pexels.com/photos/3379943/pexels-photo-3379943.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            src="data/Photographar.png"
           />
           <div class="msc-creator-image-label">
             <span class="msc-creator-dot"></span>
@@ -1908,7 +2013,7 @@
               <img
                 alt="Wedding memory album inspiration"
                 loading="lazy"
-                src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+                src="data/DSC06370.jpg.jpeg"
               />
               <span class="msc-album-tag">BESTSELLER</span>
               <span class="msc-album-index">01</span>
@@ -1934,7 +2039,7 @@
               <img
                 alt="Family photographs and keepsakes"
                 loading="lazy"
-                src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+                src="data/Famaily.jpg"
               />
               <span class="msc-album-index">02</span>
             </div>
@@ -1959,7 +2064,7 @@
               <img
                 alt="Couple photography album inspiration"
                 loading="lazy"
-                src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+                src="data/DSC07051.jpg.jpeg"
               />
               <span class="msc-album-index">03</span>
             </div>
