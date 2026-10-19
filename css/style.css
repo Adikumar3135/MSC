@@ -7304,185 +7304,1019 @@ section[id] {
    MSC AVAILABILITY SECTION — responsive from mobile to ultrawide
 ========================================================= */
 .msc-availability {
-  --avail-gold: #e8ba59;
-  --avail-text: #f7f2eb;
-  --avail-muted: #aaa7a3;
-  padding: clamp(48px, 6vw, 104px) clamp(18px, 4vw, 76px);
-  background: radial-gradient(ellipse at 75% 15%, #30271930, transparent 48%), #101012;
-  color: var(--avail-text);
-  font-family: "DM Sans", sans-serif;
-  overflow: clip;
+    --avail-gold: #e8ba59;
+    --avail-text: #f7f2eb;
+    --avail-muted: #aaa7a3;
+    padding: clamp(48px, 6vw, 104px) clamp(18px, 4vw, 76px);
+    background: radial-gradient(ellipse at 75% 15%, #30271930, transparent 48%), #101012;
+    color: var(--avail-text);
+    font-family: "DM Sans", sans-serif;
+    overflow: clip;
 }
-.msc-availability * { box-sizing: border-box; }
+
+.msc-availability * {
+    box-sizing: border-box;
+}
+
 .msc-availability .availability-box {
-  width: 100%;
-  max-width: 1480px;
-  margin: 0 auto;
-  padding: clamp(28px, 4vw, 68px);
-  border: 1px solid #59472b;
-  border-radius: clamp(22px, 2.2vw, 36px);
-  background: linear-gradient(125deg, #ffffff05, #ffffff01);
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: clamp(28px, 4vw, 68px);
+    border: 1px solid #59472b;
+    border-radius: clamp(22px, 2.2vw, 36px);
+    background: linear-gradient(125deg, #ffffff05, #ffffff01);
 }
+
 .msc-availability .availability-label {
-  display: flex; align-items: center; gap: 12px;
-  color: var(--avail-gold); font-size: clamp(10px, .78vw, 14px);
-  font-weight: 500; letter-spacing: clamp(1.5px, .18vw, 3px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--avail-gold);
+    font-size: clamp(10px, .78vw, 14px);
+    font-weight: 500;
+    letter-spacing: clamp(1.5px, .18vw, 3px);
 }
-.msc-availability .availability-label > span { width: clamp(24px, 2.5vw, 42px); height: 1px; background: var(--avail-gold); }
+
+.msc-availability .availability-label>span {
+    width: clamp(24px, 2.5vw, 42px);
+    height: 1px;
+    background: var(--avail-gold);
+}
+
 .msc-availability h2 {
-  max-width: 1100px; margin: clamp(20px, 2vw, 32px) 0 18px;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 5.1vw, 88px); font-weight: 400;
-  letter-spacing: -.035em; line-height: 1.03; text-wrap: balance;
+    max-width: 1100px;
+    margin: clamp(20px, 2vw, 32px) 0 18px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5.1vw, 88px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.03;
+    text-wrap: balance;
 }
-.msc-availability h2 em { color: var(--avail-gold); font-weight: 400; }
+
+.msc-availability h2 em {
+    color: var(--avail-gold);
+    font-weight: 400;
+}
+
 .msc-availability .availability-description {
-  max-width: 850px; margin: 0 0 clamp(28px, 3vw, 44px);
-  color: var(--avail-muted); font-size: clamp(13px, .95vw, 17px); line-height: 1.9;
+    max-width: 850px;
+    margin: 0 0 clamp(28px, 3vw, 44px);
+    color: var(--avail-muted);
+    font-size: clamp(13px, .95vw, 17px);
+    line-height: 1.9;
 }
+
 .msc-availability .availability-fields {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1vw, 16px);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(10px, 1vw, 16px);
 }
-.msc-availability .field-wrap { min-width: 0; }
+
+.msc-availability .field-wrap {
+    min-width: 0;
+}
+
 .msc-availability select,
 .msc-availability input[type="date"],
 .msc-availability input[type="text"] {
-  display: block; width: 100%; min-width: 0; height: clamp(54px, 4.2vw, 68px);
-  padding: 0 clamp(14px, 1.5vw, 24px); border: 1px solid #454249; border-radius: 16px;
-  outline: none; background-color: #252428; color: #f0d59a;
-  font: inherit; font-size: clamp(14px, 1vw, 18px); color-scheme: dark;
-  transition: border-color .25s, box-shadow .25s;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: clamp(54px, 4.2vw, 68px);
+    padding: 0 clamp(14px, 1.5vw, 24px);
+    border: 1px solid #454249;
+    border-radius: 16px;
+    outline: none;
+    background-color: #252428;
+    color: #f0d59a;
+    font: inherit;
+    font-size: clamp(14px, 1vw, 18px);
+    color-scheme: dark;
+    transition: border-color .25s, box-shadow .25s;
 }
-.msc-availability select { cursor: pointer; }
+
+.msc-availability select {
+    cursor: pointer;
+}
+
 .msc-availability select:focus,
-.msc-availability input:focus { border-color: var(--avail-gold); box-shadow: 0 0 0 3px #e8ba5920; }
-.msc-availability select option { background: #19191b; color: white; }
-.msc-availability [hidden] { display: none !important; }
-.msc-availability .availability-button {
-  display: inline-flex; align-items: center; justify-content: center; gap: 13px;
-  min-height: 56px; margin-top: 24px; padding: 0 26px; border: 0; border-radius: 40px;
-  background: var(--avail-gold); color: #17130b; font: inherit; font-size: clamp(13px, .9vw, 16px);
-  font-weight: 700; cursor: pointer; transition: transform .25s, background .25s;
+.msc-availability input:focus {
+    border-color: var(--avail-gold);
+    box-shadow: 0 0 0 3px #e8ba5920;
 }
-.msc-availability .availability-button:hover { transform: translateY(-2px); background: #f5d486; }
-.msc-availability .availability-button:focus-visible { outline: 2px solid #fff0c5; outline-offset: 4px; }
-.msc-availability .availability-message { max-width: 850px; margin-top: 18px; color: var(--avail-gold); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
-.msc-availability .availability-message:empty { display: none; }
-.msc-availability .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.msc-availability select option {
+    background: #19191b;
+    color: white;
+}
+
+.msc-availability [hidden] {
+    display: none !important;
+}
+
+.msc-availability .availability-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-height: 56px;
+    margin-top: 24px;
+    padding: 0 26px;
+    border: 0;
+    border-radius: 40px;
+    background: var(--avail-gold);
+    color: #17130b;
+    font: inherit;
+    font-size: clamp(13px, .9vw, 16px);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .25s, background .25s;
+}
+
+.msc-availability .availability-button:hover {
+    transform: translateY(-2px);
+    background: #f5d486;
+}
+
+.msc-availability .availability-button:focus-visible {
+    outline: 2px solid #fff0c5;
+    outline-offset: 4px;
+}
+
+.msc-availability .availability-message {
+    max-width: 850px;
+    margin-top: 18px;
+    color: var(--avail-gold);
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.msc-availability .availability-message:empty {
+    display: none;
+}
+
+.msc-availability .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* Global safeguards against overflow on narrow screens */
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { max-width: 100%; }
-img, video, iframe, svg { max-width: 100%; }
-input, select, textarea, button { max-width: 100%; }
-@media (max-width: 800px) {
-  .msc-availability { padding: 48px 20px; }
-  .msc-availability .availability-box { padding: 34px 28px; border-radius: 26px; }
-  .msc-availability .availability-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .msc-availability .date-wrap { grid-column: 1 / -1; }
-  .msc-availability .city-other-wrap { grid-column: 1 / -1; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
+
+body {
+    max-width: 100%;
+}
+
+img,
+video,
+iframe,
+svg {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+}
+
+@media (max-width: 800px) {
+    .msc-availability {
+        padding: 48px 20px;
+    }
+
+    .msc-availability .availability-box {
+        padding: 34px 28px;
+        border-radius: 26px;
+    }
+
+    .msc-availability .availability-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .msc-availability .date-wrap {
+        grid-column: 1 / -1;
+    }
+
+    .msc-availability .city-other-wrap {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 520px) {
-  .msc-availability { padding: 38px 15px; }
-  .msc-availability .availability-box { padding: 27px 19px; border-radius: 22px; }
-  .msc-availability .availability-label { font-size: 10px; letter-spacing: 1.6px; }
-  .msc-availability .availability-label > span { width: 24px; }
-  .msc-availability h2 { margin-top: 21px; font-size: clamp(34px, 9vw, 47px); letter-spacing: -.03em; }
-  .msc-availability .desktop-break { display: none; }
-  .msc-availability .availability-description { margin-bottom: 24px; font-size: 13px; }
-  .msc-availability .availability-fields { grid-template-columns: minmax(0, 1fr); gap: 11px; }
-  .msc-availability .date-wrap, .msc-availability .city-other-wrap { grid-column: auto; }
-  .msc-availability select, .msc-availability input[type="date"], .msc-availability input[type="text"] { height: 55px; padding: 0 14px; font-size: 14px; }
-  .msc-availability .availability-button { width: 100%; min-height: 54px; margin-top: 17px; font-size: 14px; }
+    .msc-availability {
+        padding: 38px 15px;
+    }
+
+    .msc-availability .availability-box {
+        padding: 27px 19px;
+        border-radius: 22px;
+    }
+
+    .msc-availability .availability-label {
+        font-size: 10px;
+        letter-spacing: 1.6px;
+    }
+
+    .msc-availability .availability-label>span {
+        width: 24px;
+    }
+
+    .msc-availability h2 {
+        margin-top: 21px;
+        font-size: clamp(34px, 9vw, 47px);
+        letter-spacing: -.03em;
+    }
+
+    .msc-availability .desktop-break {
+        display: none;
+    }
+
+    .msc-availability .availability-description {
+        margin-bottom: 24px;
+        font-size: 13px;
+    }
+
+    .msc-availability .availability-fields {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 11px;
+    }
+
+    .msc-availability .date-wrap,
+    .msc-availability .city-other-wrap {
+        grid-column: auto;
+    }
+
+    .msc-availability select,
+    .msc-availability input[type="date"],
+    .msc-availability input[type="text"] {
+        height: 55px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+
+    .msc-availability .availability-button {
+        width: 100%;
+        min-height: 54px;
+        margin-top: 17px;
+        font-size: 14px;
+    }
 }
 
 /* Scale the whole experience up on large desktop and ultrawide displays */
 @media (min-width: 1600px) {
-  .msc-nav-container { width: min(100%, 1760px); min-height: 100px; padding-inline: clamp(48px, 4.5vw, 100px); }
-  .msc-logo-image { width: 64px; height: 58px; }
-  .msc-brand-text strong { font-size: 17px; }
-  .msc-brand-text small { font-size: 11px; }
-  .msc-nav-link { font-size: 15px; }
-  .msc-nav-links { gap: clamp(22px, 2vw, 36px); }
-  .msc-book-btn { font-size: 15px; padding: 15px 24px; }
-  .msc-hero { height: min(900px, calc(100svh - 100px)); }
-  .msc-hero-content { width: min(100%, 1660px); padding-inline: clamp(70px, 6vw, 120px); }
-  .msc-hero-title { max-width: 1100px; font-size: clamp(88px, 5.6vw, 112px); }
-  .msc-hero-description { max-width: 700px; font-size: 18px; }
-  .msc-hero-eyebrow { font-size: 13px; }
-  .msc-hero-btn { min-height: 62px; padding-inline: 30px; font-size: 14px; }
-  .msc-about-container, .msc-services-container, .msc-fr-container, .msc-team-container,
-  .msc-receive-container, .msc-products-container, .msc-portfolio-container,
-  .msc-process-container, .msc-reviews-container, .msc-why-container,
-  .msc-creator-container, .msc-albums-container, .msc-wp-container,
-  .msc-we-container, .msc-faq-container, .msc-footer-container {
-    max-width: 1600px !important; width: calc(100% - clamp(80px, 8vw, 180px));
-  }
-  .msc-about, .msc-services, .msc-film-reels, .msc-team, .msc-receive,
-  .msc-products, .msc-portfolio, .msc-process, .msc-reviews, .msc-why,
-  .msc-creator-network, .msc-albums, .msc-wedding-pricing, .msc-wedding-enquiry, .msc-faq {
-    padding-top: clamp(90px, 7vw, 145px); padding-bottom: clamp(90px, 7vw, 145px);
-  }
-  .msc-availability .availability-box { max-width: 1600px; }
-  .msc-footer-container { font-size: 1.08rem; }
-}
-@media (min-width: 2200px) {
-  .msc-about-container, .msc-services-container, .msc-fr-container, .msc-team-container,
-  .msc-receive-container, .msc-products-container, .msc-portfolio-container,
-  .msc-process-container, .msc-reviews-container, .msc-why-container,
-  .msc-creator-container, .msc-albums-container, .msc-wp-container,
-  .msc-we-container, .msc-faq-container, .msc-footer-container {
-    max-width: 1800px !important; width: calc(100% - 10vw);
-  }
-  .msc-hero-title { font-size: clamp(112px, 5.2vw, 140px); }
-  .msc-hero-description { font-size: 20px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .msc-availability *, .msc-availability *::before, .msc-availability *::after { animation: none !important; transition: none !important; }
+    .msc-nav-container {
+        width: min(100%, 1760px);
+        min-height: 100px;
+        padding-inline: clamp(48px, 4.5vw, 100px);
+    }
+
+    .msc-logo-image {
+        width: 64px;
+        height: 58px;
+    }
+
+    .msc-brand-text strong {
+        font-size: 17px;
+    }
+
+    .msc-brand-text small {
+        font-size: 11px;
+    }
+
+    .msc-nav-link {
+        font-size: 15px;
+    }
+
+    .msc-nav-links {
+        gap: clamp(22px, 2vw, 36px);
+    }
+
+    .msc-book-btn {
+        font-size: 15px;
+        padding: 15px 24px;
+    }
+
+    .msc-hero {
+        height: min(900px, calc(100svh - 100px));
+    }
+
+    .msc-hero-content {
+        width: min(100%, 1660px);
+        padding-inline: clamp(70px, 6vw, 120px);
+    }
+
+    .msc-hero-title {
+        max-width: 1100px;
+        font-size: clamp(88px, 5.6vw, 112px);
+    }
+
+    .msc-hero-description {
+        max-width: 700px;
+        font-size: 18px;
+    }
+
+    .msc-hero-eyebrow {
+        font-size: 13px;
+    }
+
+    .msc-hero-btn {
+        min-height: 62px;
+        padding-inline: 30px;
+        font-size: 14px;
+    }
+
+    .msc-about-container,
+    .msc-services-container,
+    .msc-fr-container,
+    .msc-team-container,
+    .msc-receive-container,
+    .msc-products-container,
+    .msc-portfolio-container,
+    .msc-process-container,
+    .msc-reviews-container,
+    .msc-why-container,
+    .msc-creator-container,
+    .msc-albums-container,
+    .msc-wp-container,
+    .msc-we-container,
+    .msc-faq-container,
+    .msc-footer-container {
+        max-width: 1600px !important;
+        width: calc(100% - clamp(80px, 8vw, 180px));
+    }
+
+    .msc-about,
+    .msc-services,
+    .msc-film-reels,
+    .msc-team,
+    .msc-receive,
+    .msc-products,
+    .msc-portfolio,
+    .msc-process,
+    .msc-reviews,
+    .msc-why,
+    .msc-creator-network,
+    .msc-albums,
+    .msc-wedding-pricing,
+    .msc-wedding-enquiry,
+    .msc-faq {
+        padding-top: clamp(90px, 7vw, 145px);
+        padding-bottom: clamp(90px, 7vw, 145px);
+    }
+
+    .msc-availability .availability-box {
+        max-width: 1600px;
+    }
+
+    .msc-footer-container {
+        font-size: 1.08rem;
+    }
 }
 
-.msc-footer-socials a { font-size: 17px; border-radius: 50%; }
-.msc-footer-socials a:hover { transform: translateY(-2px); }
-.msc-footer-socials a:focus-visible { outline: 2px solid var(--footer-gold, #b89558); outline-offset: 3px; }
+@media (min-width: 2200px) {
+
+    .msc-about-container,
+    .msc-services-container,
+    .msc-fr-container,
+    .msc-team-container,
+    .msc-receive-container,
+    .msc-products-container,
+    .msc-portfolio-container,
+    .msc-process-container,
+    .msc-reviews-container,
+    .msc-why-container,
+    .msc-creator-container,
+    .msc-albums-container,
+    .msc-wp-container,
+    .msc-we-container,
+    .msc-faq-container,
+    .msc-footer-container {
+        max-width: 1800px !important;
+        width: calc(100% - 10vw);
+    }
+
+    .msc-hero-title {
+        font-size: clamp(112px, 5.2vw, 140px);
+    }
+
+    .msc-hero-description {
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .msc-availability *,
+    .msc-availability *::before,
+    .msc-availability *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+.msc-footer-socials a {
+    font-size: 17px;
+    border-radius: 50%;
+}
+
+.msc-footer-socials a:hover {
+    transform: translateY(-2px);
+}
+
+.msc-footer-socials a:focus-visible {
+    outline: 2px solid var(--footer-gold, #b89558);
+    outline-offset: 3px;
+}
 
 /* Large-screen typography: keep sections legible instead of leaving tiny desktop text */
 @media (min-width: 1600px) {
-  html { font-size: 17px; }
-  .msc-about-title,
-  .msc-services-title,
-  .msc-portfolio-title,
-  .msc-albums-title,
-  .msc-process-title,
-  .msc-reviews-title,
-  .msc-why-title,
-  .msc-products-title,
-  .msc-faq-title,
-  .msc-creator-title { font-size: clamp(44px, 3.2vw, 72px) !important; }
-  .msc-services-intro,
-  .msc-about-description,
-  .msc-fr-heading p,
-  .msc-faq-intro { font-size: clamp(15px, 1vw, 19px); line-height: 1.9; }
-  .msc-service-content p,
-  .msc-portfolio-item p,
-  .msc-footer-description,
-  .msc-footer-column a,
-  .msc-footer-contact p { font-size: 14px; }
-  .msc-service-card { min-height: 100%; }
-  .msc-service-content { padding: clamp(22px, 2vw, 34px); }
-  .msc-service-content h3 { font-size: clamp(22px, 1.6vw, 30px); }
-  .msc-footer-socials a { width: 44px; height: 44px; font-size: 20px; }
+    html {
+        font-size: 17px;
+    }
+
+    .msc-about-title,
+    .msc-services-title,
+    .msc-portfolio-title,
+    .msc-albums-title,
+    .msc-process-title,
+    .msc-reviews-title,
+    .msc-why-title,
+    .msc-products-title,
+    .msc-faq-title,
+    .msc-creator-title {
+        font-size: clamp(44px, 3.2vw, 72px) !important;
+    }
+
+    .msc-services-intro,
+    .msc-about-description,
+    .msc-fr-heading p,
+    .msc-faq-intro {
+        font-size: clamp(15px, 1vw, 19px);
+        line-height: 1.9;
+    }
+
+    .msc-service-content p,
+    .msc-portfolio-item p,
+    .msc-footer-description,
+    .msc-footer-column a,
+    .msc-footer-contact p {
+        font-size: 14px;
+    }
+
+    .msc-service-card {
+        min-height: 100%;
+    }
+
+    .msc-service-content {
+        padding: clamp(22px, 2vw, 34px);
+    }
+
+    .msc-service-content h3 {
+        font-size: clamp(22px, 1.6vw, 30px);
+    }
+
+    .msc-footer-socials a {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
 }
+
 @media (min-width: 2200px) {
-  html { font-size: 18px; }
-  .msc-about-title,
-  .msc-services-title,
-  .msc-portfolio-title,
-  .msc-albums-title,
-  .msc-process-title,
-  .msc-reviews-title,
-  .msc-why-title,
-  .msc-products-title,
-  .msc-faq-title,
-  .msc-creator-title { font-size: clamp(64px, 3vw, 82px) !important; }
+    html {
+        font-size: 18px;
+    }
+
+    .msc-about-title,
+    .msc-services-title,
+    .msc-portfolio-title,
+    .msc-albums-title,
+    .msc-process-title,
+    .msc-reviews-title,
+    .msc-why-title,
+    .msc-products-title,
+    .msc-faq-title,
+    .msc-creator-title {
+        font-size: clamp(64px, 3vw, 82px) !important;
+    }
+}
+
+
+/* =================================
+   MSC PREMIUM PORTFOLIO
+================================= */
+
+.msc-work {
+    --msc-bg: #11120f;
+    --msc-card: #1b1c18;
+    --msc-gold: #c9a96e;
+    --msc-text: #f7f3eb;
+    --msc-muted: #b5b1a7;
+
+    background: var(--msc-bg);
+    color: var(--msc-text);
+    padding: clamp(65px, 9vw, 120px) 20px;
+    font-family: inherit;
+    overflow: hidden;
+}
+
+.msc-work *,
+.msc-work *::before,
+.msc-work *::after {
+    box-sizing: border-box;
+}
+
+.msc-work-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.msc-work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.msc-work-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--msc-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.msc-work-header h2 {
+    font-size: clamp(37px, 5.5vw, 70px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.msc-work-header h2 em {
+    color: var(--msc-gold);
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.msc-work-header>p {
+    color: var(--msc-muted);
+    max-width: 365px;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 5px;
+}
+
+/* FILTERS */
+
+.msc-work-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.msc-filter {
+    appearance: none;
+    border: 1px solid #373831;
+    background: transparent;
+    color: #d0cec5;
+    padding: 12px 19px;
+    border-radius: 30px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.msc-filter:hover,
+.msc-filter.active {
+    background: var(--msc-gold);
+    border-color: var(--msc-gold);
+    color: #171711;
+}
+
+/* GRID */
+
+.msc-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 245px;
+    grid-auto-flow: dense;
+    gap: 17px;
+}
+
+.msc-work-card {
+    min-width: 0;
+    min-height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--msc-card);
+    animation: mscFadeIn .4s ease both;
+}
+
+.msc-work-card.tall {
+    grid-row: span 2;
+}
+
+.msc-work-card.wide {
+    grid-column: span 2;
+}
+
+.msc-work-card[hidden] {
+    display: none !important;
+}
+
+.msc-work-media {
+    appearance: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    color: white;
+    background: #25251f;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.msc-work-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.msc-work-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            transparent 30%,
+            rgba(0, 0, 0, .08) 45%,
+            rgba(0, 0, 0, .85) 100%);
+    pointer-events: none;
+}
+
+.msc-work-media:hover img {
+    transform: scale(1.07);
+}
+
+.msc-work-media:focus-visible,
+.msc-filter:focus-visible,
+.msc-work-cta:focus-visible {
+    outline: 2px solid var(--msc-gold);
+    outline-offset: 4px;
+}
+
+.msc-card-overlay {
+    position: absolute;
+    z-index: 2;
+    inset: auto 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    pointer-events: none;
+}
+
+.msc-card-tag {
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: 1.8px;
+    color: var(--msc-gold);
+    font-weight: 700;
+}
+
+.msc-card-title {
+    font-family: Georgia, serif;
+    font-size: clamp(19px, 2.1vw, 27px);
+    line-height: 1.2;
+}
+
+.msc-card-action {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 21px;
+    color: var(--msc-gold);
+    opacity: 0;
+    transform: translate(-5px, 5px);
+    transition: .3s ease;
+}
+
+.msc-work-media:hover .msc-card-action {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.msc-play-icon {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    padding-left: 3px;
+    border: 1px solid rgba(255, 255, 255, .8);
+    background: rgba(0, 0, 0, .25);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    transition: .3s ease;
+}
+
+.msc-work-media:hover .msc-play-icon {
+    background: var(--msc-gold);
+    color: #171711;
+    border-color: var(--msc-gold);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* FOOTER */
+
+.msc-work-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid #34352e;
+    padding-top: 27px;
+    margin-top: 35px;
+}
+
+.msc-work-footer p {
+    color: var(--msc-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.msc-work-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--msc-bg);
+    background: var(--msc-gold);
+    padding: 15px 21px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform .25s ease, background .25s ease;
+}
+
+.msc-work-cta:hover {
+    transform: translateY(-3px);
+    background: #e2c58f;
+}
+
+.msc-work-cta span {
+    font-size: 19px;
+}
+
+/* LIGHTBOX */
+
+.msc-viewer {
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 25px;
+    background: rgba(8, 8, 7, .97);
+    overscroll-behavior: contain;
+}
+
+.msc-viewer.is-open {
+    display: flex;
+    animation: mscFadeIn .2s ease;
+}
+
+.msc-viewer-backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    background: transparent;
+    cursor: default;
+}
+
+.msc-viewer-close {
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid #57574e;
+    background: #1b1c18;
+    color: white;
+    border-radius: 50%;
+    font-size: 29px;
+    cursor: pointer;
+}
+
+.msc-viewer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.msc-viewer-content img,
+.msc-viewer-content video {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    pointer-events: auto;
+}
+
+.msc-viewer-content img.is-visible,
+.msc-viewer-content video.is-visible {
+    display: block;
+}
+
+.msc-viewer-content video.is-visible {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    background: #000;
+}
+
+body.msc-viewer-open {
+    overflow: hidden;
+}
+
+/* ANIMATION */
+
+@keyframes mscFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 850px) {
+    .msc-work-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .msc-work-header>p {
+        max-width: 540px;
+    }
+
+    .msc-work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 225px;
+        gap: 12px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+    .msc-work {
+        padding: 60px 15px;
+    }
+
+    .msc-work-header h2 {
+        font-size: clamp(35px, 10vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .msc-work-header {
+        margin-bottom: 28px;
+    }
+
+    .msc-work-eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.7px;
+    }
+
+    .msc-work-filters {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .msc-filter {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .msc-work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 190px;
+        gap: 9px;
+    }
+
+    .msc-work-card.tall {
+        grid-row: span 2;
+    }
+
+    .msc-work-card.wide {
+        grid-column: span 2;
+    }
+
+    .msc-card-overlay {
+        inset: auto 11px 12px;
+        gap: 5px;
+    }
+
+    .msc-card-tag {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .msc-card-title {
+        font-size: 17px;
+        overflow-wrap: anywhere;
+    }
+
+    .msc-card-action {
+        font-size: 17px;
+    }
+
+    .msc-play-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .msc-work-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .msc-viewer {
+        padding: 65px 10px 15px;
+    }
+
+    .msc-viewer-close {
+        top: 10px;
+        right: 12px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .msc-work *,
+    .msc-work *::before,
+    .msc-work *::after,
+    .msc-viewer {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }
