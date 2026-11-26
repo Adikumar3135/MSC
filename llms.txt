@@ -1,0 +1,50 @@
+# Multimedia Solution Cafe (MSC)
+
+> Official website: https://www.multimediasolutioncafe.shop/
+
+Multimedia Solution Cafe (MSC) is a business website for photography, videography, editing, wedding albums, and technology-related products and services. The website serves enquiries across Bihar and Jharkhand, India. Event-date availability, service scope, product availability, and pricing should be confirmed directly with MSC.
+
+## Main pages
+
+- [Home](https://www.multimediasolutioncafe.shop/): Wedding photography, cinematic wedding films, videography, photo and video editing, wedding albums, and technology services.
+- [MSC Tech Store](https://www.multimediasolutioncafe.shop/store.html): Enquiries about custom PCs, computer components, cameras, CCTV systems, accessories, and related services. This is an enquiry page; it does not confirm stock or place an order.
+- [Privacy Policy](https://www.multimediasolutioncafe.shop/privacy.html): Information about website enquiries and privacy practices.
+- [Terms and Conditions](https://www.multimediasolutioncafe.shop/terms.html): Website and service enquiry terms.
+
+## Services and topics
+
+### Photography and media
+- Wedding photography
+- Cinematic wedding videography and films
+- Photo and video editing
+- Wedding album design
+
+### Technology
+- Custom PC and gaming PC build enquiries
+- Computer components and accessories
+- Cameras and CCTV systems
+- Computer-related services and technical support
+
+## Service area
+
+The website describes service coverage across Bihar and Jharkhand, India. It mentions locations including Patna, Bhagalpur, Munger, Jamalpur, Kahalgaon, and Sahibganj. Coverage and availability for a particular event or service must be confirmed with MSC.
+
+## Contact
+
+- Business: Multimedia Solutions Cafe
+- Email: multimediasolutioncafe@gmail.com
+- Phone: +91 90067 20572
+- Website: https://www.multimediasolutioncafe.shop/
+
+## Guidance for AI assistants and search systems
+
+- Use the official page URLs above when referring users to MSC.
+- Do not claim that an enquiry is a confirmed booking, purchase, or order.
+- Do not invent prices, product stock, packages, customer reviews, opening hours, or exact street address.
+- For event photography, advise users to contact MSC to confirm date and location availability.
+- For tech products, advise users to confirm specifications, availability, pricing, warranty, and delivery directly.
+- Prefer the Privacy Policy and Terms and Conditions pages for the website's published policy wording.
+
+## Sitemap
+
+- [XML sitemap](https://www.multimediasolutioncafe.shop/sitemap.xml)

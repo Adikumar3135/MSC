@@ -4,21 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>MSC Tech Store | Custom PC Builds, Computer Parts & Tech Services</title>
-    <link rel="icon" type="image/png" href="data/fav-icon.png">
-    <meta name="description" content="Explore custom gaming PC builds, PC components, cameras, CCTV systems and computer services from Multimedia Solutions Cafe. Share your requirements and enquire directly with MSC." />
-    <meta name="keywords" content="MSC Tech Store, custom PC build, gaming PC build, computer components, PC parts, graphics card, computer accessories, CCTV systems, cameras, computer repair, Multimedia Solutions Cafe" />
+    <title>
+      MSC Tech Store | Custom PC Builds, Computer Parts & Tech Services
+    </title>
+    <link rel="icon" type="image/png" href="data/fav-icon.png" />
+    <meta
+      name="description"
+      content="Explore custom gaming PC builds, PC components, cameras, CCTV systems and computer services from Multimedia Solutions Cafe. Share your requirements and enquire directly with MSC."
+    />
+    <meta
+      name="keywords"
+      content="MSC Tech Store, custom PC build, gaming PC build, computer components, PC parts, graphics card, computer accessories, CCTV systems, cameras, computer repair, Multimedia Solutions Cafe"
+    />
     <meta name="author" content="Multimedia Solutions Cafe" />
+    <link rel="canonical" href="https://www.multimediasolutioncafe.shop/store.html" />
+    <meta property="og:url" content="https://www.multimediasolutioncafe.shop/store.html" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://www.multimediasolutioncafe.shop/data/logo.png" />
+    <meta name="twitter:image" content="https://www.multimediasolutioncafe.shop/data/logo.png" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#080808" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Multimedia Solutions Cafe" />
-    <meta property="og:title" content="MSC Tech Store | Custom PC Builds & Tech Services" />
-    <meta property="og:description" content="Plan a custom PC build, explore computer components and enquire about tech products and services with MSC." />
+    <meta
+      property="og:title"
+      content="MSC Tech Store | Custom PC Builds & Tech Services"
+    />
+    <meta
+      property="og:description"
+      content="Plan a custom PC build, explore computer components and enquire about tech products and services with MSC."
+    />
     <meta property="og:image" content="data/logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MSC Tech Store | Custom PC Builds & Tech Services" />
-    <meta name="twitter:description" content="Custom PC build planning, computer components, cameras, CCTV systems and technical services." />
+    <meta
+      name="twitter:title"
+      content="MSC Tech Store | Custom PC Builds & Tech Services"
+    />
+    <meta
+      name="twitter:description"
+      content="Custom PC build planning, computer components, cameras, CCTV systems and technical services."
+    />
+
+    <!-- GSAP LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- MSC PRODUCT EXPERIENCE -->
+    <script src="js/msc-store-experience.js"></script>
 
     <link rel="stylesheet" href="css/store.css" />
     <link
@@ -27,60 +60,63 @@
     />
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Multimedia Solutions Cafe",
-      "email": "multimediasolutioncafe@gmail.com",
-      "telephone": "+91-9006720572",
-      "description": "Multimedia Solutions Cafe provides photography, videography, editing, computer support and enquiries for custom PC builds, components and technology products.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9431462683",
-        "contactType": "customer enquiries",
-        "availableLanguage": ["English", "Hindi"]
+      {
+        "@context": "https://schema.org",
+         "@type": "Organization",
+        "@id": "https://www.multimediasolutioncafe.shop/#organization",
+        "name": "Multimedia Solutions Cafe",
+        "alternateName": "MSC",
+        "url": "https://www.multimediasolutioncafe.shop/",
+        "email": "multimediasolutioncafe@gmail.com",
+        "telephone": "+91-9006720572",
+        "description": "Multimedia Solutions Cafe provides photography, videography, editing, computer support and enquiries for custom PC builds, components and technology products.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9431462683",
+          "contactType": "customer enquiries",
+          "availableLanguage": ["English", "Hindi"]
+        }
       }
-    }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I request a custom gaming PC build?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Share your use case, budget and component preferences through the custom PC enquiry form. MSC can discuss a suitable configuration, subject to component availability and final confirmation."
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I request a custom gaming PC build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Share your use case, budget and component preferences through the custom PC enquiry form. MSC can discuss a suitable configuration, subject to component availability and final confirmation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I ask about PC components and accessories?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Contact MSC to enquire about processors, motherboards, RAM, storage, graphics cards, monitors and computer accessories. Availability and prices must be confirmed before purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I enquire about cameras, CCTV or computer services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the WhatsApp enquiry links on this page to describe the product or service you need. Installation, service scope, pricing and delivery arrangements will be confirmed directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does submitting the custom PC form place a confirmed order?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The form opens a WhatsApp enquiry. Your order is not confirmed until the configuration, component availability, final price and delivery details have been agreed."
+            }
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I ask about PC components and accessories?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Contact MSC to enquire about processors, motherboards, RAM, storage, graphics cards, monitors and computer accessories. Availability and prices must be confirmed before purchase."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I enquire about cameras, CCTV or computer services?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use the WhatsApp enquiry links on this page to describe the product or service you need. Installation, service scope, pricing and delivery arrangements will be confirmed directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does submitting the custom PC form place a confirmed order?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The form opens a WhatsApp enquiry. Your order is not confirmed until the configuration, component availability, final price and delivery details have been agreed."
-          }
-        }
-      ]
-    }
+        ]
+      }
     </script>
   </head>
 
@@ -142,7 +178,7 @@
             loop
             playsinline
             preload="metadata"
-            poster="data/logo.png"
+            poster="data/msc-store-hero.mp4"
             aria-hidden="true"
           >
             <source src="data/msc-store-hero.mp4" type="video/mp4" />
@@ -212,8 +248,99 @@
             </div>
           </div>
         </div>
-
       </section>
+
+      <!-- MSC CINEMATIC PRODUCT EXPERIENCE -->
+      <section class="msc-store-hero msc-sequence-hero" id="mscSequenceHero">
+        <!-- Background -->
+        <div class="msc-sequence-grid"></div>
+        <div class="msc-sequence-glow"></div>
+        <div class="msc-sequence-overlay"></div>
+
+        <!-- Header inside hero -->
+        <div class="msc-sequence-top">
+          <span class="msc-sequence-brand">MSC<span>.</span></span>
+          <span class="msc-sequence-top-label">TECHNOLOGY REDEFINED</span>
+          <span class="msc-sequence-coming">COMING SOON</span>
+        </div>
+
+        <!-- Product Text -->
+        <div class="msc-sequence-content">
+          <div class="msc-sequence-index">
+            PRODUCT <span id="mscProductNumber">01</span>
+            <span>/ 03</span>
+          </div>
+
+          <span class="msc-sequence-category" id="mscProductCategory">
+            PERFORMANCE COMPUTING
+          </span>
+
+          <h1 id="mscProductTitle">
+            BUILD YOUR
+            <em>POWER.</em>
+          </h1>
+
+          <p id="mscProductDescription">
+            Discover powerful custom-built computers engineered for performance
+            and creativity.
+          </p>
+
+          <div class="msc-sequence-actions">
+            <a
+              href="https://wa.me/919431462683?text=Hello%20MSC%2C%20I%20want%20to%20enquire%20about%20your%20products."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="msc-sequence-btn"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              ENQUIRE NOW
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a href="#store-offerings" class="msc-sequence-explore">
+              EXPLORE STORE
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product Canvas -->
+        <div class="msc-sequence-visual">
+          <canvas id="mscProductCanvas"></canvas>
+        </div>
+
+        <!-- Loading -->
+        <div class="msc-sequence-loading" id="mscSequenceLoading">
+          <div class="msc-sequence-spinner"></div>
+          <span id="mscSequenceLoadingText">LOADING PRODUCT EXPERIENCE</span>
+          <div class="msc-sequence-loading-bar">
+            <div id="mscSequenceLoadingFill"></div>
+          </div>
+          <small id="mscSequenceLoadingPercent">0%</small>
+        </div>
+
+        <!-- Frame Counter -->
+        <div class="msc-sequence-counter">
+          <span id="mscFrameCurrent">001</span>
+          <span>/</span>
+          <span id="mscFrameTotal">030</span>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="msc-sequence-bottom">
+          <div class="msc-sequence-scroll">
+            <span></span>
+            SCROLL TO EXPLORE
+          </div>
+
+          <div class="msc-sequence-progress">
+            <div id="mscSequenceProgress"></div>
+          </div>
+
+          <div class="msc-sequence-label" id="mscSequenceLabel">GAMING PC</div>
+        </div>
+      </section>
+      <!-- END MSC CINEMATIC EXPERIENCE -->
 
       <!-- =========================
              PRODUCTS AND SERVICES
@@ -500,28 +627,51 @@
         </div>
       </section>
 
-
-
       <!-- Helpful answers for search and visitors -->
-      <section class="msc-store-faq" id="store-faq" aria-labelledby="msc-faq-title">
+      <section
+        class="msc-store-faq"
+        id="store-faq"
+        aria-labelledby="msc-faq-title"
+      >
         <div class="msc-store-faq-inner">
           <span>QUICK ANSWERS</span>
           <h2 id="msc-faq-title">MSC Tech Store FAQs</h2>
           <details>
             <summary>Can I request a custom gaming PC build?</summary>
-            <p>Yes. Share your use case, budget and component preferences through the custom PC enquiry form. MSC can discuss a suitable configuration, subject to component availability and final confirmation.</p>
+            <p>
+              Yes. Share your use case, budget and component preferences through
+              the custom PC enquiry form. MSC can discuss a suitable
+              configuration, subject to component availability and final
+              confirmation.
+            </p>
           </details>
           <details>
             <summary>Can I ask about PC components and accessories?</summary>
-            <p>Yes. Contact MSC to enquire about processors, motherboards, RAM, storage, graphics cards, monitors and computer accessories. Availability and prices must be confirmed before purchase.</p>
+            <p>
+              Yes. Contact MSC to enquire about processors, motherboards, RAM,
+              storage, graphics cards, monitors and computer accessories.
+              Availability and prices must be confirmed before purchase.
+            </p>
           </details>
           <details>
-            <summary>How do I enquire about cameras, CCTV or computer services?</summary>
-            <p>Use the WhatsApp enquiry links on this page to describe the product or service you need. Installation, service scope, pricing and delivery arrangements will be confirmed directly.</p>
+            <summary>
+              How do I enquire about cameras, CCTV or computer services?
+            </summary>
+            <p>
+              Use the WhatsApp enquiry links on this page to describe the
+              product or service you need. Installation, service scope, pricing
+              and delivery arrangements will be confirmed directly.
+            </p>
           </details>
           <details>
-            <summary>Does submitting the custom PC form place a confirmed order?</summary>
-            <p>No. The form opens a WhatsApp enquiry. Your order is not confirmed until the configuration, component availability, final price and delivery details have been agreed.</p>
+            <summary>
+              Does submitting the custom PC form place a confirmed order?
+            </summary>
+            <p>
+              No. The form opens a WhatsApp enquiry. Your order is not confirmed
+              until the configuration, component availability, final price and
+              delivery details have been agreed.
+            </p>
           </details>
         </div>
       </section>
@@ -681,29 +831,29 @@
         })
       })()
     </script>
-
+    <script src="store.js"></script>
 
     <script>
       // Attempt muted autoplay; browsers may block autoplay in some conditions.
-      (() => {
-        const video = document.querySelector(".msc-store-hero-video");
-        if (!video) return;
-        video.muted = true;
+      ;(() => {
+        const video = document.querySelector('.msc-store-hero-video')
+        if (!video) return
+        video.muted = true
         const tryPlay = () => {
-          const result = video.play();
-          if (result && typeof result.catch === "function") {
+          const result = video.play()
+          if (result && typeof result.catch === 'function') {
             result.catch(() => {
               // The poster/gradient remains visible if autoplay is blocked.
-            });
+            })
           }
-        };
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", tryPlay, { once: true });
-        } else {
-          tryPlay();
         }
-        video.addEventListener("canplay", tryPlay, { once: true });
-      })();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', tryPlay, { once: true })
+        } else {
+          tryPlay()
+        }
+        video.addEventListener('canplay', tryPlay, { once: true })
+      })()
     </script>
   </body>
 </html>

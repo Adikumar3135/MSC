@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9">
+<xsl:output method="html" encoding="UTF-8" indent="yes"/>
+<xsl:template match="/">
+<html><head><title>MSC Sitemap</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font:15px Arial,sans-serif;background:#f7f3ec;color:#211b14;margin:0;padding:40px}main{max-width:900px;margin:auto;background:white;padding:32px;border-radius:12px}h1{font-family:Georgia;font-weight:normal}p{color:#766d60}table{width:100%;border-collapse:collapse;margin-top:25px}th,td{text-align:left;padding:14px;border-bottom:1px solid #eee}th{color:#96784a}a{color:#75572c}small{color:#777}</style></head><body><main><h1>Multimedia Solutions Cafe — Sitemap</h1><p>Public website pages available for search engines and visitors.</p><table><tr><th>Page URL</th><th>Last modified</th><th>Priority</th></tr><xsl:for-each select="s:urlset/s:url"><tr><td><a href="{s:loc}"><xsl:value-of select="s:loc"/></a></td><td><xsl:value-of select="s:lastmod"/></td><td><xsl:value-of select="s:priority"/></td></tr></xsl:for-each></table><p><small>Generated for multimediasolutioncafe.shop</small></p></main></body></html>
+</xsl:template></xsl:stylesheet>

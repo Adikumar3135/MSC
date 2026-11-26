@@ -102,3 +102,24 @@ assets still load correctly after deployment.
 **Project:** Multimedia Solutions Cafe (MSC)\
 **Purpose:** Business showcase and customer enquiries\
 **Status:** Static front-end website
+
+
+## SEO, AEO and GEO setup
+
+The project includes:
+- Page titles, descriptions, canonical URLs, social sharing metadata and crawl directives.
+- `sitemap.xml` listing the published HTML pages.
+- `robots.txt` allowing public crawling and pointing crawlers to the sitemap.
+- `llms.txt` summarizing the site's pages, services, service area and contact details for AI systems.
+- Schema.org structured data already present on the home and store pages, including local business/organization and store FAQs.
+- Canonical and social metadata on the Tech Store and legal pages.
+
+### Before/after deployment checklist
+
+1. Upload `robots.txt`, `llms.txt` and `sitemap.xml` to the website root so they resolve at `/robots.txt`, `/llms.txt` and `/sitemap.xml`.
+2. Verify that the canonical domain is the live preferred domain (`https://www.multimediasolutioncafe.shop/`). Redirect the non-preferred www/non-www and HTTP variants to it.
+3. Add the sitemap in Google Search Console and Bing Webmaster Tools, then inspect the home and store URLs.
+4. Verify Schema.org markup with Google's Rich Results Test and Schema Markup Validator. Structured data does not guarantee rich results or rankings.
+5. Keep page content, FAQs, service areas, contact details, images and sitemap URLs accurate as the business changes.
+6. GEO/AEO visibility is supported by clear factual page content, consistent business identity, crawlable HTML and structured data; no file or markup can guarantee AI citations or rankings.
+
