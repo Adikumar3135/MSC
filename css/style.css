@@ -8320,3 +8320,532 @@ body.msc-viewer-open {
         scroll-behavior: auto !important;
     }
 }
+
+/* =====================================
+   MSC E-ALBUM SECTION
+===================================== */
+
+.msc-ealbum {
+    --ea-gold: #b89558;
+    --ea-dark: #302820;
+
+    padding: 110px 5%;
+    background: #f8f6f0;
+    color: var(--ea-dark);
+    overflow: hidden;
+}
+
+.msc-ealbum-container {
+    width: min(1200px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* CONTENT */
+
+.msc-ealbum-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ea-gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.msc-ealbum-label span {
+    width: 28px;
+    height: 1px;
+    background: var(--ea-gold);
+}
+
+.msc-ealbum-content h2 {
+    margin: 25px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 66px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.msc-ealbum-content h2 em {
+    color: var(--ea-gold);
+    font-weight: 400;
+}
+
+.msc-ealbum-description {
+    max-width: 490px;
+    color: #777166;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.msc-ealbum-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 32px 0;
+}
+
+.msc-ealbum-features div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #554a3b;
+}
+
+.msc-ealbum-features i {
+    color: var(--ea-gold);
+    font-size: 17px;
+}
+
+.msc-ealbum-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.msc-ealbum-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 17px 23px;
+    background: var(--ea-gold);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.msc-ealbum-btn:hover {
+    background: var(--ea-dark);
+    color: #fff;
+}
+
+.msc-ealbum-secondary {
+    color: var(--ea-dark);
+    text-decoration: none;
+    font-size: 12px;
+    border-bottom: 1px solid var(--ea-gold);
+    padding-bottom: 5px;
+}
+
+/* ALBUM VISUAL */
+
+.msc-ealbum-visual {
+    padding: 20px;
+    background: #fffefa;
+    border: 1px solid #e9e1d4;
+    box-shadow: 0 25px 65px rgba(50, 40, 25, 0.10);
+    transform: rotate(1deg);
+}
+
+.msc-ealbum-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 17px;
+    color: #927648;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.msc-ealbum-main-image {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    background: #e8dfd0;
+}
+
+.msc-ealbum-main-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.msc-ealbum-image-caption {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 55px 20px 22px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .75));
+    color: white;
+}
+
+.msc-ealbum-image-caption span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.msc-ealbum-image-caption h3 {
+    margin: 8px 0 0;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.msc-ealbum-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.msc-ealbum-photo-grid img,
+.msc-ealbum-more {
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+}
+
+.msc-ealbum-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    background: #f1eadf;
+    color: #927648;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.msc-ealbum-more i {
+    font-size: 23px;
+}
+
+.msc-ealbum-share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5px 3px;
+    color: #6e6253;
+    font-size: 11px;
+}
+
+.msc-ealbum-share div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.msc-ealbum-share div i {
+    color: var(--ea-gold);
+}
+
+.msc-ealbum-share>i {
+    font-size: 21px;
+    color: #258b51;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .msc-ealbum-container {
+        gap: 40px;
+        grid-template-columns: 1fr;
+    }
+
+    .msc-ealbum-content {
+        max-width: 650px;
+    }
+
+    .msc-ealbum-visual {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+        box-sizing: border-box;
+    }
+}
+
+@media(max-width: 560px) {
+    .msc-ealbum {
+        padding: 70px 20px;
+    }
+
+    .msc-ealbum-content h2 {
+        font-size: 43px;
+    }
+
+    .msc-ealbum-features {
+        gap: 18px 10px;
+    }
+
+    .msc-ealbum-features div {
+        font-size: 10px;
+    }
+
+    .msc-ealbum-visual {
+        padding: 12px;
+    }
+
+    .msc-ealbum-main-image {
+        height: 250px;
+    }
+
+    .msc-ealbum-photo-grid img,
+    .msc-ealbum-more {
+        height: 75px;
+    }
+
+    .msc-ealbum-image-caption h3 {
+        font-size: 22px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .msc-ealbum-btn {
+        transition: none;
+    }
+}
+
+
+/* =====================================
+   MSC WEB INVITATION
+===================================== */
+
+.msc-invitation {
+    padding: 110px 5%;
+    background: #fffefa;
+    overflow: hidden;
+}
+
+.msc-invitation-container {
+    width: min(1200px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+/* INVITATION CARD */
+
+.msc-invitation-visual {
+    position: relative;
+    max-width: 470px;
+    width: 100%;
+    margin: auto;
+    padding: 25px;
+    background: #f4eee4;
+    box-sizing: border-box;
+}
+
+.msc-invite-card {
+    position: relative;
+    min-height: 490px;
+    padding: 40px 20px;
+    border: 1px solid #c6a66c;
+    background:
+        radial-gradient(circle at top, #fffdf8, #f8f0e3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    color: #6d5135;
+}
+
+.msc-invite-top {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.msc-invite-flower {
+    font-size: 48px;
+    color: #b89558;
+    margin: 18px 0;
+}
+
+.msc-invite-small {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.msc-invite-card h2 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.msc-invite-card h2 em {
+    color: #b89558;
+    font-weight: 400;
+}
+
+.msc-invite-line {
+    width: 65px;
+    height: 1px;
+    background: #b89558;
+    margin: 15px auto;
+}
+
+.msc-invite-names {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.msc-invite-names span {
+    color: #b89558;
+    font-style: italic;
+}
+
+.msc-invite-date {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 18px;
+}
+
+.msc-invite-venue {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.msc-invite-flower.bottom {
+    font-size: 30px;
+    margin: 15px 0 0;
+}
+
+.msc-invite-tag {
+    position: absolute;
+    bottom: -17px;
+    right: -15px;
+    background: #302820;
+    color: white;
+    padding: 14px 20px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CONTENT */
+
+.msc-invitation-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b89558;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.msc-invitation-label span {
+    width: 28px;
+    height: 1px;
+    background: #b89558;
+}
+
+.msc-invitation-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 400;
+    line-height: 1.12;
+    margin: 25px 0;
+}
+
+.msc-invitation-content h2 em {
+    color: #b89558;
+}
+
+.msc-invitation-content>p {
+    max-width: 500px;
+    color: #777166;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.msc-invitation-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 15px;
+    margin: 35px 0;
+}
+
+.msc-invitation-features div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #554a3b;
+}
+
+.msc-invitation-features i {
+    color: #b89558;
+    font-size: 17px;
+}
+
+.msc-invitation-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 23px;
+    background: #b89558;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.msc-invitation-btn:hover {
+    background: #302820;
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .msc-invitation-container {
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+}
+
+@media(max-width: 560px) {
+    .msc-invitation {
+        padding: 75px 20px;
+    }
+
+    .msc-invitation-visual {
+        padding: 15px;
+    }
+
+    .msc-invite-card {
+        min-height: 420px;
+        padding: 25px 12px;
+    }
+
+    .msc-invite-card h2 {
+        font-size: 43px;
+    }
+
+    .msc-invitation-content h2 {
+        font-size: 42px;
+    }
+
+    .msc-invitation-features {
+        gap: 18px 10px;
+    }
+
+    .msc-invitation-features div {
+        font-size: 10px;
+    }
+
+    .msc-invite-tag {
+        right: -5px;
+        font-size: 9px;
+    }
+}
